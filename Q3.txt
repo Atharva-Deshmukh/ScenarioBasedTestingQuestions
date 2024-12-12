@@ -1,0 +1,6 @@
+How will you overcome the challenge of having limited/inaccurate documentation for testing?
+- A software is never created without any requirement, there may be some requirements that are either not properly documented or there is less documentation.
+  So, I will try to find out if there are any available related documentations.
+- Talk to Subject Matter Experts, POs, Team members, architects..
+- Document high level functionalities based on discussions with above.
+- I will Apply exploratory testing and then document the test cases on the go.
