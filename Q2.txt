@@ -1,0 +1,7 @@
+How will you approach testing a user story in agile project?
+- Understand the story by reading Acceptance Criteria and the test design if there is any.
+- Make sure every detail of the user story is clear to me. Connect with stakeholders for this.
+- Define high level test scenarios.
+- Cover the impact areas to other existing features.
+- Priority will be what parts of the story are in the scope of the current sprint. Rest will be planned later.
+- Elaborate the high level test cases into test scenarios using BDD syntax.
