@@ -1,0 +1,15 @@
+Why is regression testing in agile development challenging and how will you handle it?
+- Agile testing is an iterative approach.
+- New code/features are added every sprint on the top of the existing code.
+- They may introduce new defects and there are defect fixes every sprint.
+- Each time the code is merged, we need to do a regression test every time, hence regression tests need to be automated.
+- Some basic sanity tests also need to be automated.
+
+how part answer:
+- Risk based approach to testing.
+- It is generally done when we don't automate our tests or there is no automation resource and support from leadership.
+- We ask developers the key features to be developed in this sprint and their impact areas, so that we can write manual tests for those impacted areas and reduce risks by testing them.
+- See, with each sprint, our regression test suites keep adding new tests in it. 
+- So, lets say after last 4 sprints, we have 50 TCs in the regression suite, it is not feasible to execute all 50 in the 5th sprint along with TCs of this sprint.
+- Hence, Risk Based Testing is necessary, where we identify risky areas and test only those.
+- We can also automate the regression test suites in that sprint itself to reduce overhead.
