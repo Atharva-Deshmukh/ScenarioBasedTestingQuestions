@@ -1,0 +1,15 @@
+Testing Pagination in Postman
+- The query parameters like limit and offset for pagination do not work by default for every API. 
+  They must be explicitly implemented by backend developers as part of the API logic. 
+  
+- If the backend does not implement pagination:
+
+  The API will ignore the limit and offset parameters.
+  The response might return all available data, leading to 
+  large payloads and potential performance issues.
+
+- query parameters used = offset and limit
+- offset: if offset = 2, give response from 3rd to end
+- limit: if limit = 4, give 4 responses only
+
+- Verify in the metadata (response) the link for next page and previous page.

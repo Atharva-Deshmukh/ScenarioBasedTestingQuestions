@@ -1,0 +1,20 @@
+If the software is currently in production and one of the code module is modified. 
+Will you retest the whole application or just test the funcionality associated with 
+that module?
+- Ask the interviewer the level impact and importance of this failing module
+- Then only we can decide how much testing we need to do.
+
+- If this is an independent module with no impact on other modules, then I will do 
+   regression test on this module only.
+  
+- If this module is some core module, which can impact several other modules,
+   then regression testing must be done for this modules as well as other impacted ones.
+   
+                       module 2
+                         ^
+                         |
+         module 4 ---> module 1 <--- module 3
+		                 |
+					   module 5
+
+- Connect with developers to know the impact and connection of the changed module with other modules and plan the testing accordingly.

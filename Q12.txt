@@ -1,0 +1,66 @@
+How do you ensure that all requirements are covered by testing?
+- We will use Requirement Tracability Matrix (RTM)
+- RTM stands for Requirement Traceability matrix. RTM maps all the requirements with the test cases. By using this document one can verify test cases cover all functionality of the application as per the requirements of the customer.
+- The main purpose of the requirement traceability matrix is to verify that the all requirements of clients are covered in the test cases designed by the testers.
+- We can either use a simple excel sheet for this or we can create RTM in JAZZ,JIRA.
+- When business analysis people get the requirements from clients, they prepare a document called SRS (System/Software Requirement Specification) and these requirements are stored in this document. 
+- If we are working in the Agile model, we call this document Sprint Backlog, and requirements are present in it in the form of user stories. 
+- When QA gets the SRS/Sprint backlog document they first try to understand the requirements thoroughly and then start writing test cases and reviewing them with the entire project team. But sometimes it may happen that in these test cases, some functionality of requirements is missing, so to avoid it we required a requirement traceability matrix.
+
+- Each test case is traced back to each requirement in the RTM. Therefore, there is less chance of missing any requirement in testing, and 100% test coverage can be achieved. 
+
+Parameters of Requirement Traceability Matrix (RTM):
+Requirement ID: The requirement ID is assigned to every requirement of the project.
+Requirement description: for every requirement a detailed description is given in the SRS (System/Software Requirement Specification) document.
+Requirement Type: understand the type of requirements i.e., banking, telecom, healthcare, traveling, e-commerce, education, etc.
+Test cases ID: the testing team designs test cases. Test cases are also assigned with some ID.  
+
+Types of Traceability Matrix:
+
+Forward traceability matrix
+
++------------------+----------------------------------+------------------+--------------+
+| Requirement ID   | Requirement Description         | Test Case ID     | Status       |
++------------------+----------------------------------+------------------+--------------+
+| REQ-001          | User login functionality        | TC-001           | Passed       |
+| REQ-002          | Password reset feature          | TC-002, TC-003   | Failed       |
++------------------+----------------------------------+------------------+--------------+
+
+In the forward traceability matrix, we mapped the requirements with the test cases. Here we can verify that all requirements are covered in test cases and no functionality is missing in test cases. It helps you to ensure that all the requirements available in the SRS/ Sprint backlog can be traced back to test cases designed by the testers. It is used to check whether the project progresses in the right direction.
+
+
+
+Backward traceability matrix
+
++------------------+-------------------------------+------------------+--------------+
+| Test Case ID     | Test Case Description         | Requirement ID   | Status       |
++------------------+-------------------------------+------------------+--------------+
+| TC-001           | Test login functionality      | REQ-001          | Passed       |
+| TC-002           | Verify password reset         | REQ-002          | Failed       |
++------------------+-------------------------------+------------------+--------------+
+
+In the backward traceability matrix, we mapped the test cases with the requirements. Here we can verify that no extra test case is added which is not required as per our requirements. It helps you to ensure that any test cases that you have designed can be traced back to the requirements or user stories, and you are not extending the scope of the work by just creating additional test cases that can not be mapped to the requirement. The backward traceability matrix is also known as the reverse traceability matrix.
+
+
+Bi-directional traceability matrix
+
++------------------+----------------------------------+------------------+--------------------------+--------------+
+| Requirement ID   | Requirement Description         | Test Case ID     | Test Case Description    | Status       |
++------------------+----------------------------------+------------------+--------------------------+--------------+
+| REQ-001          | User login functionality        | TC-001           | Test login functionality | Passed       |
+| REQ-002          | Password reset feature          | TC-002, TC-003   | Verify password reset    | Failed       |
++------------------+----------------------------------+------------------+--------------------------+--------------+
+
+A bi-directional traceability matrix is a combination of a forward traceability matrix and a backward traceability matrix. Here we verify the requirements and test cases in both ways. 
+
+
+Advantages of RTM:
+Below are some benefits of using RTM:
+
+Full test coverage: RTM confirms the 100% test coverage.
+Verify missing functionality: This document is helpful for the tester to check there is not any functionality missed while testing the application. 
+Helps to prioritize and track requirements: It also helps to understand what extra test cases we added that are not part of the requirement.
+Helps to track test status: It is easy to keep track of the overall test status.
+Proper consistent documentation: RTM can help in the effort to provide proper and consistent documentation for the team.
+Versioning is easier: RTM helps to keep track of the required modifications and how they impact every part of the project.
+

@@ -1,0 +1,20 @@
+Do you agree that the tester should study design documents for writing test cases?
+- It is absolutely necessary for a tester.
+- There will be two types of design documents: High level and low level
+- High level: They are the documents that are created by the solution architects and contains
+  details and explaination of the whole software ecosystem.
+  It will have high level architecture for showing various module interactions.
+  It gives idea of what systems, third party softwares and modules are in our software.
+  
+  Going through this high level design documents gives the tester the overall picture of the application 
+  that he is going to test.
+  
+  Helps to write end to end test cases.
+  Helps to wrtie integration test cases between different modules.
+  
+
+- Low level: Here, the high level design is elaborated into lower level details.
+  Ex: the list of all APIs being used in the application. (Swagger)
+  It helps to plan regression test suites, like automation for APIs.
+  
+- The tester can also help to rectify the mistakes or any missing thing in these documents found while testing.
