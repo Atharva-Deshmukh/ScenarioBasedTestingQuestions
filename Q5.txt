@@ -1,0 +1,97 @@
+How will u test cookies?
+
+- LATER: show them for cookies in cypress
+
+What are Cookies?
+Cookies are small pieces of data stored on the user's browser by a website. 
+They are used to remember information about the user, such as login status, preferences, 
+or session data. Cookies are essential for stateful communication between a client and 
+server, especially in web applications.
+
+Testing Cookies Scenario-Wise
+
+1. Validation of Cookie Creation
+Scenario: When a user logs into the application, cookies should be created with the correct attributes.
+
+Steps:
+Log in to the web application.
+Open the browser's developer tools (F12) and navigate to the "Application" tab 
+(or equivalent in other browsers).
+Check the cookies stored under the website's domain.
+
+Validate:
+Cookie name and value.
+Secure, HTTPOnly, and SameSite flags.
+Expiry date/time.
+
+2. Validation of Cookie Updates
+Scenario: When a user performs specific actions (e.g., changing language or preferences), the cookies should update accordingly.
+
+Steps:
+Perform the action (e.g., switch language).
+Check the updated cookies in the browser's developer tools.
+
+Validate:
+If the cookie's value has been updated as per the change.
+If other attributes remain consistent unless explicitly updated.
+
+3. Expiry of Cookies
+Scenario: Cookies should expire at the specified time or when the session ends.
+
+Steps:
+Check the expiry date/time of cookies in the browser's developer tools.
+Wait until the cookie expires.
+Refresh the page or interact with the site.
+
+Validate:
+The expired cookie is no longer available.
+A new cookie is created if necessary.
+
+4. Secure and HTTPOnly Flags
+Scenario: Cookies containing sensitive data should have Secure and HTTPOnly flags enabled.
+
+Steps:
+Open the browser's developer tools and inspect the cookie attributes.
+
+Validate:
+Secure flag is set for cookies used over HTTPS.
+HTTPOnly flag is enabled to prevent access via JavaScript.
+
+5. SameSite Attribute
+Scenario: Ensure cookies are protected against cross-site request forgery (CSRF).
+
+Steps:
+Check the SameSite attribute of the cookie in the browser's developer tools.
+
+Validate:
+SameSite=Lax for most scenarios (default behavior).
+SameSite=Strict for high-security areas.
+SameSite=None with Secure for third-party cookies.
+
+6. Behavior on Logout
+Scenario: Cookies should be deleted or invalidated upon logout.
+
+Steps:
+Log into the application.
+Log out of the application.
+
+Validate:
+Session cookies are cleared.
+Persistent cookies (if any) are appropriately reset or removed.
+
+7. Cross-Browser Testing
+Scenario: Verify cookies work consistently across multiple browsers.
+
+Steps:
+Test the application's cookie behavior on different browsers (e.g., Chrome, Firefox, Edge, Safari).
+
+Validate:
+Cookie creation, updates, and deletions behave consistently.
+
+11. Security Testing
+Scenario: Ensure cookies are secure from vulnerabilities.
+
+Tests:
+Session Hijacking: Validate that cookies cannot be easily intercepted or reused (use HTTPS and Secure flags).
+Session Fixation: Verify session cookies are regenerated upon login.
+Cookie Theft Prevention: Ensure HTTPOnly is set to protect cookies from JavaScript-based attacks.
