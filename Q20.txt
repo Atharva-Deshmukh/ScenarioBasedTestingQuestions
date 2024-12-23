@@ -1,0 +1,8 @@
+How will you handle an uncooperative colleague?
+- There may be two scenarios: that collegue is uncooperative only with me OR he is uncooperative with everyone. This will be known after connecting wtih other collegues.
+- If he is uncooperative with me only,then, I will check on my part if I am doing something wrong
+- I will check if I am asking those questions that are there already in some documentation, which is killing their time
+- Sometimes, I may not frame the right questions which simply kill someone's time, so I will try to frame the correct questions.
+- If the collegue is hard to catch type, like an architect or someone with time-crunch, then I will schedule a meeting with them where I all ask all the right set of questions and get all the answers in one go.
+- Scheduling meets shows confidence and preparation on my side also. I will also include my test lead since we all are working for the same goal.
+- If the collegue is unnecessary not cooperative, then I will escalate it to the senior stakeholders since It will impact the project as whole.
