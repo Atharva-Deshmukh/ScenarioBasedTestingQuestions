@@ -1,0 +1,5 @@
+How will you test the application which requires integration with the third party systems/APIs which are not available? (by 3rd party APIs, we mean some modules/utilities developed by some other party and we are just using it. The 3rd party provider will not provide any API or any test environment mostly).
+ex: OAuth service
+- The 3rd party provider will always provide with documentation based on which the developers create mock API stubs/mimics to send response in the way that is acceptable by the 3rd party API.
+- Ans: if the developers are already using such tools, then we will be using the same instead of setting up separately for testing. This will reduce test efforts.
+- In case the developers are not covering full use cases, we from testing side will add our own test cases to ensure full coverage.

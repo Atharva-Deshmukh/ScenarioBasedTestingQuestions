@@ -1,0 +1,13 @@
+You have large number of test cases to execute but limited timeframe to complete testing. What will be your approach to ensure proper test coverage?
+- ASK INTERVIEWER: do we have enough resources (no. of testers) to test?
+- large number of test cases means exactly how much?
+- given current capacity and resources, how many test cases we can cover?
+- Is there automation done already?
+- Are there any features pending from developers side for this feature or we have dependency of some kind?
+
+- Let's say we have 1000 test cases, 5 testers and we can execute only 200 test cases in the given time frame.
+- Follow Risk-Based Testing and cover only those test cases on priority that will impact the current release features.
+- Collaborate with stakeholders and devs to identify the high risk areas/impacted areas
+- Developers will help you know the modules they have touched
+- The business analysts POs will help you identify the workflow that is MUST to test for this release regardless of developer touched this part or not.
+- I will develope the test suite that has enough coverage to satisfy all the business stakeholders and then finally I will execute those.

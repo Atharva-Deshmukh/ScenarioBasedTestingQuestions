@@ -1,0 +1,6 @@
+What will be your approach to test the responsive web based application?
+- If interviewer asked just responsive application, then ASK INTERVIEWER: web based or mobile based (Android or IOS)?
+- If web based, on which browsers will the application be compliant on.
+- Do we have API swagger to cover API automation 
+- Create Test plan and categories Manual and Automted test cases, leverage automation tools
+- Plan for performance tests.

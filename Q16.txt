@@ -1,0 +1,7 @@
+You are managing a team of 5 testers which is not co-located, how will you ensure team productivity?
+- So, there is also the difference of time-zone since some members of team are remote.
+- Ensure the daily standup for the testing team specifically for 5 mins atleast.
+- Since different timezones are involved, I will ask the team if they are comfirtable with the time frame that is overlapped.
+- Will ensure whole test team is helping each other.
+- I will ensure my team has enough work in their plate and also the backup work like pipeline fixes to work on in case they are stuck and I have logged off.
+- I will also be flexible to take calls if something urgent needs my attention.
