@@ -1,0 +1,11 @@
+Tell me about yourself
+- Follow this format below
+
+- Greetings, thank you, My name is <full name>
+- Thank you for providing me this opportunity to talk about "myself and my qualifications" - this is what interviewer is interested in
+
+- Why you are qualified?
+- I am Software Test Analyst at <Current Company> working in <Current Project>. I have over 2+ years experience in testing complex software applications. I am well versed with <Keywords from job description, like Test Planning. Test Designing, Test Execution, Test Reporting, Defect Lifecycle, UI Automation, API testing and many more skillsets which I have elaborated in my resume.
+
+- Why you are there for interview
+- Although I am happy with my current role, I feel it's the time to move on for a more challenging role which this position offers in a leading organization like yours, I can assure you that I can bring in a lot of value to the role and organization. My prior experience and skillset enables me perform well and excel in this job.

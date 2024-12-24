@@ -1,0 +1,17 @@
+What is the last book you read?
+
+- This question just checks if u strive to learn and improve urself regularly.
+
+- Choose career related book if possible or any book which you can relate to job description
+- Mention book title and explain briefly about the book
+- Mention why you liked it
+- Relate it with job description
+
+We can also mention the blogs that we follow and that add value
+
+blogs I follow:
+https://www.lambdatest.com/blog
+https://www.stickyminds.com/
+gleb bahmutav and filip heric blogs for cypress
+
+Example: Recently I read blogs from (above list) and they have helped me to cultivate tester mindset and how we should be approaching and managing testing for any software products. If I am given a chance at your esteemed organization, the knowledge I acquired from this book can be extremely helpful for your organization.
