@@ -1,0 +1,8 @@
+Where do you see yourself in five years?
+- Answer should align with this role like growing deep in this role, being in the same company like seeking more senior role in the same organisation.
+
+- In five years, I see myself growing into a leadership role such as a Senior SDET, Lead SDET, or even a Test Architect within this organization. My goal is to not only deepen my expertise in test automation but also contribute to shaping the testing strategies and mentoring junior team members.
+
+In the short term, I am enthusiastic about honing my skills in advanced test automation frameworks, exploring new tools like Playwright, and expanding my knowledge of continuous integration pipelines and performance testing. I also aim to dive deeper into areas like API testing, security testing, and cloud-based testing.
+
+This role excites me because it aligns with my aspirations to grow technically and professionally while making a meaningful impact.

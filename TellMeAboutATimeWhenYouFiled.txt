@@ -1,0 +1,24 @@
+Tell me about the time when you failed.
+- As the saying goes, 'No one is perfect', that applies to me as well
+- I can recall two failures during my inital testing journey that I remeber to this day due to the lessons they have taught me.
+- 1. Overengineering Automation
+     Early in my test automation using cypress, I got a chance to work on automating a suite of tests for a large feature. I became so focused on writing a complex, reusable framework using switch cases that had almost 42 switch cases, that I missed the sprint deadline for delivering the actual feature tests. While the framework was definiely going to be useful and resusable, the delay impacted the team’s ability to quickly validate the feature.
+	 
+     This experience taught me to balance between building for the future and meeting immediate needs. 
+	 
+	 Now, I start with the minimum viable automation to meet deadlines and then iterate to improve the framework when time allows. That experience taught me to prioritize practicality and efficiency.
+
+
+- 2. Test Data Management
+     There was an instance where I underestimated the importance of managing test data. I assumed the data in our test environment would remain stable throughout our regression tests. 
+	 
+	 We had different environments for testing, like PROD INT, US PROD.., the class names changed in one of the environment suddenly due to last moment deployements
+	 Also, the testdata in one of the environment got deleted to clear the database.
+	 
+	 And I had hardcoded everything in the fixture and the automation scripts failed as the result.
+
+     At first, I spent a lot of time debugging, thinking it was an issue with the test scripts. Eventually, I realized the problem was with the test environment itself, not the scripts. This delayed our delivery timeline by a day, which wasn’t ideal, but it also taught me a crucial lesson about the importance of creating stable and reusable test data.
+
+     Since then, I’ve incorporated habit of creating DYNAMIC TEST DATA rather than depending on the hardcoded part always.
+	 
+	 We cannot eliminate hardcoding part of testdata fully, but we can try to minimise it as much as possible.
