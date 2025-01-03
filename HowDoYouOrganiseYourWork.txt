@@ -1,0 +1,10 @@
+How do you organise your work?
+- Asked to make sure you are the person  who is well-organised and you will be able to prioritise tasks accordingly.
+- During sprint planning activity of the team, I will be allocated certain defects and user stories.
+- I create a todo list of those user stories and defects that are being allocated to me.
+- I then create subtask within IBM Jazz, Kanban against each story/defect.
+- This will ensure that my piece of work will be done when I finish that task.
+- I will prioritise working on these tasks as per the sprint priority.
+- I will try to timebox my tasks, taking adequate breaks timely so that my productivity increases and I am able to do the tasks more effectively.
+
+
