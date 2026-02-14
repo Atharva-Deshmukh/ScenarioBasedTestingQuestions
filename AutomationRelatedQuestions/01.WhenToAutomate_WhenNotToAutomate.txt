@@ -1,0 +1,61 @@
+When should you automate a test, and when should you not automate it?
+
+In my experience as an SDET, automation is not about achieving 100% coverage 
+I prioritize: Business impact + Frequency + Stability + Maintenance cost
+
+When Should You Automate a Test?
+-------------------------------
+
+- High Regression / Repetitive Tests. 
+  If a test is executed frequently (every sprint or release)
+
+- Stable and Well-defined API/UI components
+  If the UI keeps changing weekly, automation becomes maintenance-heavy.
+
+- High risk and Critical business flows must always work
+  Ex: Login, checkout, payment, search, basic CRUDs
+  Automation ensures they’re continuously validated in CI/CD.
+
+- Security validations like user role based permissions
+
+- When the same test needs to run with multiple data combinations and envs.
+  like different environments like US, Japan..
+
+- Cross-browser testing
+
+- Performance and load testing tests
+    Manual testing is not feasible for:
+    - Load tests
+    - Stress tests
+    These must be automated using performance tools like k6 and sitespeed
+
+- CI/CD Fit and maintenance:
+  I prioritize automation that provides fast feedback in CI and protects 
+  production stability. 
+  Automation is code — it must be maintainable, version-controlled, 
+  and reviewed like production code.
+
+
+When Should You NOT Automate a Test?
+------------------------------------
+
+- Complex Visual Validation
+  pixel-level validation can be flaky and expensive.
+  Manual review may be more effective.
+  like some canvas related scenarios
+
+- Frequently Changing / Unstable Features, UI, API
+  Early stage features
+  Automation will break frequently and create high maintenance overhead.
+
+- One-Time or Rarely Executed Tests
+   If a test runs once or very rarely, automation ROI is low.
+   Ex: Data migration verification for just one release
+
+- Exploratory Testing
+  It requires human creativity in edge case discovery and UI/UX Validation
+  Humans outperform automation here.
+
+-  Non-deterministic Flaky worklfows
+   I avoid automating flows that are non-deterministic unless I can stabilize 
+   them with proper waits, mocks, or contract validation.
