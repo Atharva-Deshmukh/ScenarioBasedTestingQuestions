@@ -20,9 +20,9 @@ Test Layer Optimization (Test Pyramid Thinking)
 As an SDET-2, I don’t just prioritize “which test,” but also “at which layer.”
 
 If validation can be done at:
-    Unit level → highest priority
+    Unit level → highest priority  -> bottomMost layer of pyramid
     API level → next
-    UI level → only if necessary
+    UI level → only if necessary    -> top layer of pyramid
 
     For example:
     Validating price calculation → API test
