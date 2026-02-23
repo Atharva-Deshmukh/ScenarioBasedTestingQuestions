@@ -1,0 +1,20 @@
+What factors do you consider before adding a test to the automation suite?
+
+=> Business Impact & Risk
+   High-risk and high-impact areas get priority automation coverage.
+
+=> Repeatability & Frequency
+   Automation is justified when The test is executed frequently (regression suite).
+   It’s required in every release.
+
+=> Flakiness Risk
+   I ensure the test: Has predictable inputs and outputs.
+
+=> Layer Selection (Test Pyramid Thinking)
+
+   I determine where this test case belongs:
+   - Unit tests → Fastest, cheapest
+   - API/Service tests → High ROI, stable
+   - UI tests → Slower, more brittle
+
+    If the validation can be done via API instead of UI, I prefer API automation.
