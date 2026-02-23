@@ -1,0 +1,35 @@
+How do you decide the automation priority among a list of test cases?
+--------------------------------------------------------------------
+
+Business Criticality (Highest Weight)
+- Revenue generating flow
+- Core user journey like login, payment and checkout
+
+Risk & Failure Probability
+- Has this area historically had more defects (PCRs)?
+  High defect density areas get higher automation priority.
+- Has there been recent refactoring?
+
+Stability of Feature
+- Still under heavy UI changes → lower priority for UI automation.
+- Backend stable → prioritize API automation.
+  Stable areas are automated first to avoid rework.
+
+Test Layer Optimization (Test Pyramid Thinking)
+
+As an SDET-2, I don’t just prioritize “which test,” but also “at which layer.”
+
+If validation can be done at:
+    Unit level → highest priority
+    API level → next
+    UI level → only if necessary
+
+    For example:
+    Validating price calculation → API test
+    Validating button color → UI test
+
+Automation Effort vs Value
+    I estimate:
+    - How complex is automation?
+    - Does it require heavy data setup?
+    - Will it increase pipeline execution time, hence increase chances of failures
