@@ -1,0 +1,74 @@
+What’s your approach to balancing coverage vs maintenance cost in automation?
+
+=> I don’t chase 90–100% automation coverage.
+    I ask:
+    - Does this test protect a critical user journey?
+    - Does it prevent high-severity production issues?
+    - Does it provide fast feedback in CI?
+
+    My goal is maximum risk coverage with minimum test volume.
+
+=> Follow the Test Pyramid (Layer Strategy)
+
+    Maintenance cost increases as you move up the pyramid:
+    - Unit tests → Low cost, high stability
+    - API/service tests → Medium cost, strong ROI
+    - UI tests → High cost, brittle
+    
+    So I:
+    Keep UI tests limited to core user journeys
+
+=> Avoid Redundant Coverage
+
+    A common mistake is testing the same logic at multiple layers.
+
+    For example:
+    - If business logic is covered thoroughly at unit level,
+    - API verifies contract,
+    - UI only verifies integration — not internal logic again.
+
+=> Prefer Deterministic & Stable Tests
+
+- Flaky tests are the biggest maintenance cost.
+- If a test is inherently unstable, I either redesign it or 
+  avoid automating it.
+- A smaller stable suite is more valuable than a large flaky one.
+
+=> Categorize Tests by Execution Strategy
+
+    - Not every automated test needs to run on every PR.
+
+    - I categorize into:
+        Smoke (core validation)
+        Regression
+        Nightly / Extended
+
+    This reduces CI Friction
+
+=> Build Reusable Framework Components
+
+    As an SDET-2, I focus on framework architecture first — so adding new tests is cheap.
+
+    Maintenance cost drops dramatically when:
+    - Page objects are clean and reusable
+    - API clients are centralized
+    - Test data builders exist
+    - Assertions are standardized
+
+=> Regular Suite Audits & Refactoring. 
+   
+   Automation needs grooming. Balancing coverage is not one-time work.
+
+    I:
+    - Remove obsolete tests
+    - Merge redundant scenarios
+    - Track flaky test metrics
+
+REAL WORLD example
+------------------
+
+Suppose we have 200 UI tests covering an e-commerce platform.
+
+- Move price calculation checks to unit tests.
+- Validate pricing rules via API tests.
+- Keep only 5–10 UI tests covering checkout journey.
