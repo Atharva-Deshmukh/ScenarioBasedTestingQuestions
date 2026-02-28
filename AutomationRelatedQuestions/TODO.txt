@@ -1,0 +1,111 @@
+✅ A. Test Strategy & Decision-Making
+
+How would you determine automation effort vs manual testing effort for a release?
+
+How do you decide when to refactor or rewrite test automation code?
+
+When would you write API tests vs UI tests?
+
+How do you decide which tests should run in CI/CD and which run nightly?
+
+How do you measure automation effectiveness?
+
+What’s your approach to flaky tests—retry, fix, or remove?
+
+Given limited time, how do you decide what gets tested first?
+
+✅ B. Test Architecture & Design Principles
+
+How do you design a scalable and maintainable automation framework?
+
+Explain Page Object Model and when it is beneficial.
+
+What design patterns are useful in test automation?
+
+What’s the difference between data-driven, keyword-driven, and BDD frameworks?
+
+How do you organize test suites for large applications?
+
+How do you structure test data and configuration for automation?
+
+What is the role of dependency injection in test automation?
+
+How would you design test hooks for setup and teardown?
+
+How would you build reusable components for automation tests?
+
+✅ C. Risk, Coverage & Test Planning
+
+What is test coverage and how do you measure it?
+
+How do you assess risk to decide what to automate first?
+
+How do you ensure regression coverage with automation?
+
+What’s the strategy for automating non-functional tests like performance or security?
+
+How do you handle testing edge cases that are hard to automate?
+
+Explain Exploratory Testing vs Scripted Automation in your plan.
+
+✅ D. CI/CD & DevOps Integration
+
+What is your strategy for integrating automation into CI/CD pipelines?
+
+How do you handle test failures in CI/CD?
+
+When should tests be triggered—on commit, nightly, or release?
+
+In a build pipeline, where would you place smoke, sanity, regression suites and why?
+
+How do you measure and report automation health in DevOps dashboards?
+
+✅ E. API, Backend & Performance Decisions
+
+When would you prefer automation at API layer vs UI layer?
+
+How do you test APIs for reliability and performance?
+
+How do you design automated tests for microservices?
+
+How do you automate contract testing for APIs?
+
+What metrics would you monitor in performance automation?
+
+✅ F. Test Data & Environment Decisions
+
+How do you design and manage test data for automation?
+
+How do you deal with dynamic data in automation?
+
+How would you test in parallel environments safely?
+
+How do you manage environment dependencies for automation runs?
+
+What’s your approach to stubbing/mocking services in automation?
+
+✅ G. Cross-Functional & Soft-Skill Questions
+
+How do you convince developers to fix flaky tests?
+
+How do you negotiate automation scope with product managers?
+
+Explain a time when you disagreed on test strategy — what did you do?
+
+How do you mentor junior SDETs on automation best practices?
+
+How do you handle shifting requirements in an automation project?
+
+Explain a situation when automation saved a release.
+
+✅ H. Quality Metrics & Reporting
+
+What metrics would you track for automation success?
+
+How would you justify automation ROI to leadership?
+
+How do you build dashboards that represent quality insights?
+
+What KPIs matter in automation engineering?
+
+How would you measure code quality of automation scripts?
