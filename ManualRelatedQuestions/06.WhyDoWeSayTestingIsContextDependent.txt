@@ -1,0 +1,31 @@
+                            Why Do We Say "Testing Is Context Dependent"?
+                            --------------------------------------------
+
+Testing approach depends/adapts based on the type of product, domain, risks, users.
+There is NO one-size-fits-all testing strategy.
+
+Why It Is Context Dependent?
+----------------------------
+
+Different Domains Have Different Risks
+- Banking/Healthcare → High security, compliance, accuracy required.
+- Gaming Apps → Focus on performance, graphics, user experience.
+- E-commerce → Focus on usability, payment flow, peak load handling.
+
+Different Project Types Need Different Testing
+- Startup MVP → Fast testing, exploratory, rapid feedback.
+- Enterprise System → Detailed documentation, regression cycles.
+- Safety-Critical System → Rigorous validation and certification testing.
+
+User Expectations Differ
+- Internal tool → Basic usability may be acceptable.
+- Customer-facing product → High usability and reliability required.
+
+Technology Stack Matters
+- Web app → Browser compatibility testing.
+- Mobile app → Device, OS, screen size testing.
+- API → Contract and integration testing focus.
+
+Example:
+Testing a medical device requires strict regulatory validation.
+Testing a social media feature may focus more on performance and user experience.
