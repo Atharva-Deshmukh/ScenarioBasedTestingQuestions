@@ -1,6 +1,10 @@
-                                        What is Testing
-                                        ---------------
-A set of activities to discover defects and evaluate the quality of software artifacts. 
-These artifacts, when being tested, are known as test objects.
-Testing is not only a technical activity. It needs to be properly planned, managed, 
-estimated, monitored and controlled.
+                                        What is Testing?
+                                        ----------------
+Testing is a set of activities to:
+- Discover defects
+- Evaluate quality
+- Reduce risk
+- Provide information for decision-making
+- Testing is NOT just execution — it includes planning, analysis, design, 
+  implementation, monitoring, control, and reporting.
+
