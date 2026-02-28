@@ -1,0 +1,45 @@
+                                            Causes of defects
+                                            -----------------
+
+A defect is introduced when there is a gap between expected and actual behavior.
+Defects can occur at any stage of SDLC.
+
+Major Causes of Defects:
+
+Requirement Issues
+- Incomplete requirements
+- Ambiguous requirements
+- Frequently changing requirements
+- Misunderstood business needs
+
+Design Issues
+- Poor architecture design
+- Incorrect logic flow
+- Missing edge case handling
+
+Coding Errors
+- Logical mistakes
+- Incorrect conditions or loops
+- Improper exception handling
+- Hardcoded values
+- Poor coding standards
+
+Communication Gaps
+- Miscommunication between BA, Dev, and QA
+- Incorrect understanding of client expectations
+
+Time Pressure
+- Tight deadlines
+- Skipping reviews or testing
+- Inadequate regression testing
+
+Environment Issues
+- Configuration mismatch
+- Version conflicts
+- Database or server setup errors
+
+
+Third-Party Dependencies
+- API failures
+- Library/version incompatibility
+- External system downtime
