@@ -1,0 +1,17 @@
+Depending on context, testing objectives may include:
+
+- Verifying requirements are met
+- Validating system fulfills user needs
+- Building confidence in quality level
+- Detecting failures and defects
+- Preventing defects
+- Providing information to stakeholders
+- Reducing risk
+- Complying with contractual/legal requirements
+
+🔎 Real-World Example (Banking App)
+
+Requirement: “User can transfer funds up to daily limit.”
+    Verification → Check system enforces limit.
+    Validation → Confirm limit aligns with regulatory rules.
+    Risk reduction → Prevent over-transfer fraud.
