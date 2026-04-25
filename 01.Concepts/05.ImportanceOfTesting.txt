@@ -1,0 +1,26 @@
+                            Importance of Testing
+                            ---------------------
+
+Testers represent real-users during development and ensures that the users' needs 
+are considered during development.
+
+Testing Saves money.
+    When testers are involved early in SDLC in agile processes, inputs from the test team helps identify
+    gaps in requirements and designs well in advance.
+    Because of these, those defects don't go to production
+    Cost of fixing these defects early is far less.
+
+Software Development process is also enhanced due to tester's inputs
+
+Testing is necessary because defects can cause:
+- Financial loss
+- Reputation damage and loss of customer trust
+- Injury or death (safety-critical systems)
+- Legal penalties
+  Testing mitigates these risks before release.
+
+Software testing also ensures security and performance, since its not just manual testing, it involves
+load testing also
+
+
+

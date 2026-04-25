@@ -1,0 +1,71 @@
+                                        1️⃣ Based on Action
+                                        -------------------
+
+1. Manual Testing
+  
+  Testing performed by humans without automation tools.
+  Ex: Tester manually verifies login with valid and invalid credentials in a banking app.
+
+2. Automated Testing
+
+  Testing executed using tools/scripts.
+  Ex: Cypress script runs regression suite after every deployment.
+
+
+                                      2️⃣ Based on Test Techniques
+                                      ----------------------------
+                                      
+1. Black-Box Testing (Specification-based)
+
+Testing without knowledge of internal code.
+
+Techniques (ISTQB):
+
+Equivalence Partitioning
+
+Boundary Value Analysis
+
+Decision Table Testing
+
+State Transition Testing
+
+Use Case Testing
+
+Example:
+Transfer limit:
+
+Valid: ₹99,999
+
+Boundary: ₹1,00,000
+
+Invalid: ₹1,00,001
+
+2. White-Box Testing (Structure-based)
+
+Testing internal code structure.
+
+Techniques (ISTQB):
+
+Statement coverage
+
+Decision coverage
+
+Path testing
+
+Example:
+Ensuring all IF-ELSE conditions in interest calculation are executed.
+
+3. Experience-Based Testing
+
+Based on tester knowledge and intuition.
+
+Techniques (ISTQB):
+
+Exploratory Testing
+
+Error Guessing
+
+Checklist-based Testing
+
+Example:
+Tester tries rapid double-click on payment button expecting duplicate transaction bug.

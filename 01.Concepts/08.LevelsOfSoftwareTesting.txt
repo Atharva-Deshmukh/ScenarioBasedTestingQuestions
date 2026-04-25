@@ -1,0 +1,58 @@
+                                    Levels of Software Testing
+                                    --------------------------
+
+
+                            Acceptance Testing  --> Top (Least in number, business validation)
+                                ▲
+                                │
+                            System Testing    --> Even fewer, broader coverage
+                                ▲
+                                │
+                            Integration Testing --> Fewer than unit tests
+                                ▲
+                                │
+                                Unit Testing    --> Base (Maximum tests, fastest, cheapest)
+
+                            Testing Pyramid (Levels of Testing) 
+
+Cost and execution time increase as we move up.
+
+Software testing is performed at different levels to ensure quality at each stage of development.
+
+Level-1: Unit Testing (Individual component)
+--------------------------------------------
+- Tests individual components or functions.
+- Usually performed by Developers.
+- Focus: Logic correctness.
+
+Example:
+Testing a function that calculates interest separately.
+
+Level-2: Integration Testing (Module interaction)
+-------------------------------------------------
+- Tests interaction between integrated modules.
+- Ensures modules work together correctly.
+- Performed by Developers or QA.
+
+Example:
+Testing payment module integration with bank API.
+
+Level-3: System Testing (Complete System)
+-----------------------------------------
+- Tests the complete, integrated system.
+- Performed by QA team.
+- Focus: End-to-end functionality against requirements.
+- Includes functional and non-functional testing.
+
+Example:
+Testing full user flow from login → transfer → confirmation.
+
+Level-4: Acceptance Testing (Business Validation)
+--------------------------------------------------
+- Final level of testing.
+- Performed by Client / End Users / Product Owner / Product Manager.
+- Focus: Business requirements and user needs.
+- Includes UAT (User Acceptance Testing).
+
+Example:
+Client verifies that daily transfer limit meets business policy.

@@ -1,0 +1,60 @@
+Verification vs Validation (Interview Favorite)
+
+Verification                           | Validation
+---------------------------------------|----------------------------------------
+Are we building the product right?     | Are we building the right product?
+
+Ensures work products conform to       | Ensures the final product meets user and stakeholder needs
+specified requirements                 | 
+
+Often analytical and review-based      | Typically evaluation- and execution-based
+
+Checks against requirements            | Checks against user needs
+
+
+WHEN DOES IT HAPPEN?
+---------------------------------------
+Verification: Throughout SDLC phases (requirements, design, coding).
+Validation: After implementation, during system testing and user evaluation.
+
+
+WHO IS INVOLVED?
+---------------------------------------
+Verification:
+- Business Analysts/Product Owners (requirement reviews)
+- Architects (design validation)
+- Developers (code reviews, unit testing)
+- QA Team (review documents & test artifacts)
+
+Validation:
+- QA Team (system testing)
+- Product Owner
+- Clients / Stakeholders / Product Manager (PM Acceptance)
+- End Users (UAT, Beta testing)
+
+
+METHODS USED
+---------------------------------------
+Verification Methods:
+- Requirement Reviews
+- Design Reviews
+- Code Reviews
+- Walkthroughs
+- Static Testing
+- Unit Testing
+- Integration Testing
+
+Validation Methods:
+- Functional Testing
+- System Testing
+- User Acceptance Testing (UAT)
+- Alpha Testing
+- Beta Testing
+
+
+Example (FinTech App):
+
+Requirement: "User can transfer up to ₹1,00,000 per day."
+
+✔ Verification: Code enforces the ₹1,00,000 daily transfer limit correctly.
+✔ Validation: Confirm whether ₹1,00,000/day matches real customer expectations and business needs.
