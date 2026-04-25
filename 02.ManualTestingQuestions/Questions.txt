@@ -1,0 +1,20 @@
+--------------------------------------------------------------------------------------------------------------------
+Suppose you find a bug in production, how would you make sure the same bug is not introduced again?
+- First, I’d do a quick root cause analysis to understand why it escaped—whether 
+  it was due to missing test coverage, an edge case, or a gap in our automation or review process.
+
+- Next, I’d create a automated test for the issue at the UI or API level.
+  This test should fail first before the fix is deployed and pass after, 
+  so we permanently capture the bug in our regression suite.
+
+- Finally, I’d share the learnings with the team and update our test strategy and test suite
+
+--------------------------------------------------------------------------------------------------------------------
+
+What do you do when your developers denies that what you filed is a Bug?
+
+- I don’t treat it as a conflict—I treat it as a misalignment in understanding.
+- First, Then I make sure the issue is clearly reproducible
+- I will provide the relevant part of the Acceptance Criteria
+- In case of any ambuity in understanding, I will loop in the Product Owner (PO)/ Business Analyst (BA)
+
