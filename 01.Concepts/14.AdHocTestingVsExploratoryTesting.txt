@@ -1,0 +1,33 @@
+Core Difference
+Ad-hoc Testing → Random, unstructured testing without planning
+Exploratory Testing → Simultaneous learning, test design, and execution with intent
+
+                                            Ad-hoc Testing
+
+Purpose:
+    Quickly find defects without any predefined approach, Provided, YOU HAVE KNOWLEDGE OF THE APPLICATION
+
+Characteristics:
+    No documentation
+    No test cases
+    Completely random and informal
+
+Example:
+    Clicking around the app randomly to see if anything breaks
+    👉 Useful for quick checks, but not reliable for coverage
+
+                                    Exploratory Testing
+
+Purpose:
+    Systematically explore the application to discover hidden defects Povided, YOU DON'T HAVE APPLICATION KNOWLEDGE
+
+Characteristics:
+    Light planning (charters/goals)
+    Tester actively learns the system while testing
+    More structured than ad-hoc, but still flexible
+
+Example:
+    “Explore checkout flow with invalid inputs and edge cases”
+    You intentionally test boundaries, error handling, and flows
+
+    👉 Highly effective for complex or new features

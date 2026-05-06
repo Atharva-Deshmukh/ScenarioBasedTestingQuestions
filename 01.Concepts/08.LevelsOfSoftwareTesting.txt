@@ -5,13 +5,13 @@
                             Acceptance Testing  --> Top (Least in number, business validation)
                                 ▲
                                 │
-                            System Testing    --> Even fewer, broader coverage
+                            System Testing      --> Even fewer, broader coverage
                                 ▲
                                 │
                             Integration Testing --> Fewer than unit tests
                                 ▲
                                 │
-                                Unit Testing    --> Base (Maximum tests, fastest, cheapest)
+                            Unit Testing        --> Base (Maximum tests, fastest, cheapest)
 
                             Testing Pyramid (Levels of Testing) 
 

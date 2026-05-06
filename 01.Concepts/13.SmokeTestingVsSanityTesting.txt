@@ -1,0 +1,9 @@
+Sanity Testing:
+- To validate that a specific bug fix or change is working as expected and no other things break 
+  due to this changes
+- If sanity fails → fix is rejected
+
+Smoke Testing:
+- To verify that the basic and critical functionalities of the application is working
+- If smoke fails → build is rejected
+- ex: app launch, login

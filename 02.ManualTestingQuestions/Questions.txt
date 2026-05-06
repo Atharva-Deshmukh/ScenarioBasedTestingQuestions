@@ -15,6 +15,232 @@ What do you do when your developers denies that what you filed is a Bug?
 
 - I don’t treat it as a conflict—I treat it as a misalignment in understanding.
 - First, Then I make sure the issue is clearly reproducible
+- I will provide the testdata I used
 - I will provide the relevant part of the Acceptance Criteria
 - In case of any ambuity in understanding, I will loop in the Product Owner (PO)/ Business Analyst (BA)
 
+--------------------------------------------------------------------------------------------------------------------
+
+What has been your greatest challenge while doing regression testing?   
+
+- Maintaining the regression suite as the application scaled.
+- as more features were added, our regression suite became large, slow, and flaky. 
+  Test execution time increased significantly, and failures were often due to instability rather than 
+  real defects. This started impacting release timelines and reduced confidence in automation.
+- I analysed the flaky tests and fixed them wherever possible, like locator update issue, testdata deletion
+- I then prioritised the tests according to the service packs using tags, we modified regression tags
+  Not everything needs to be run everytime
+
+--------------------------------------------------------------------------------------------------------------------
+
+Enlist some of the key challenges that are faced while performing sofware testing
+
+- Test Environment Issues like Data inconsistencies
+- Tight Deadlines:
+  Limited time for full regression
+  Pressure to sign off quickly
+  This Forces prioritization of critical scenarios.
+- Requirements often evolve during development, this leads to
+  Rework in automation and manual testing
+
+--------------------------------------------------------------------------------------------------------------------
+
+What are the drawbacks of the agile methodology / Implementation you faced?
+
+- Sprints are usually very deadline constrained
+- Documentation is not the priority
+- while it promotes speed and flexibility, it can sometimes lead to insufficient clarity in requirements, 
+  especially at the start of a sprint.
+- In a few cases, user stories were not detailed enough, which caused misalignment between development 
+  and testing. This led to rework, late defect discovery, and sometimes scope changes mid-sprint.
+- Another challenge is compressed testing timelines. Since development and testing happen in the same sprint, 
+  testing often gets pushed toward the end, leaving limited time for proper regression and edge case validation.
+- In my current organisation, we earlier got the feature to test after it was fully coded and deployed to INT, 
+  but this led to rework and delay when defects were found, so we started to deploy on feature environment first
+
+--------------------------------------------------------------------------------------------------------------------
+
+What is your approach when you have a high priority release to be delivered in a very short time?
+
+- my approach is to focus on risk-based testing and fast feedback, rather than trying to test everything.
+- First, I quickly understand the scope and impact of the release — which areas of the system are affected, 
+  and what the business-critical flows are.
+
+  Based on that, I prioritize testing:
+  - Critical user journeys (e.g., login, payments, core workflows)
+  - High-risk areas (recent changes, complex logic, integrations)
+  - I will do exploratory tests on impacted areas
+
+- Then I rely heavily on automation:
+  Run a smoke suite or critical regression suite in CI/CD to get quick confidence
+  Ensure all existing stable automated tests are passing
+
+--------------------------------------------------------------------------------------------------------------------
+
+Give an example of high priority and low severity bug
+
+    Severity → How bad is the defect technically?
+    Priority → How urgently it needs to be fixed?
+
+- A typo or incorrect label on the payment/checkout page.
+
+    Why this fits:
+        Severity: Low
+            It doesn’t break functionality
+            System still works fine
+        Priority: High
+            It’s user-facing and visible to all users
+            Impacts brand credibility and user trust
+            Needs immediate fix before/after release
+
+- Incorrect currency symbol displayed during checkout (e.g., showing $ instead of ₹).
+
+- Wrong logo on home page
+
+--------------------------------------------------------------------------------------------------------------------
+
+Explain what will be your reaction if the project you have been working on got sudden change in its deadline?
+
+- my first reaction is to stay calm and reassess the situation, rather than trying to rush testing blindly.
+- Then I shift to a risk-based testing approach:
+
+    Prioritize business-critical workflows
+    Focus on areas impacted by recent changes
+    Identify high-risk integrations or complex logic
+
+    Next, I leverage automation for fast feedback:
+
+    Run smoke or critical regression suites through CI/CD
+    Ensure existing stable tests are passing
+
+    For manual testing, I focus on:
+
+    Exploratory testing in high-risk areas
+    Edge cases that automation may not cover
+
+    At the same time, I communicate clearly with stakeholders:
+
+    Highlight what will be tested vs what may be partially tested - Partial release possibility
+    Call out any risks or potential gaps early
+
+--------------------------------------------------------------------------------------------------------------------
+
+If a small section of code in your application is updated, what is your testing approach in validating it?
+
+- my approach is to validate the change thoroughly while minimizing unnecessary testing effort, 
+  using a targeted, risk-based strategy.
+
+--------------------------------------------------------------------------------------------------------------------
+
+What are your daily activities as a member of automation tester in your office?
+
+- Running smoke suite daily and monitoring the regression pipelines
+- Verifying defects assigned to me and concluding them accordingly
+- Working on manual and automation testing for stories in current sprint
+
+--------------------------------------------------------------------------------------------------------------------
+
+How do you select regression test cases or form the regression test suite?
+
+I keep it a risk-based approach.
+- Identify modules affected by the recent changes.
+- Prioritize critical business flows
+- Include previously failed/bug-prone areas
+- Prefer tests already automated, reliable, and fast (CI-friendly).
+- Continuously optimize suite by Removing redundant tests, tag by priority (P0/P1/P2), and keep execution time efficient.
+
+--------------------------------------------------------------------------------------------------------------------
+
+How you ever managed writing test cases without having any documents?
+
+I have handled this kind of ambiguity once when we developed a new mobile app and there was no documentation for it.
+- Explore the application (Exploratory Testing)
+- Sync with developers, product managers, or business analysts to understand expected behavior.
+- Focus on user journeys Build test cases around real-world usage instead of waiting for perfect requirements.
+- Go throught the production bugs logged before and check if those workflows are touched.
+- Iterate and refine
+
+--------------------------------------------------------------------------------------------------------------------
+
+What is the first action you perform as a tester when the application throws any weird errors?
+
+- I will try to reproduce this consistently and capture the evidence
+- I will check console logs to see if any JS errors are there
+- I will also analyse networks tab
+- Validate the test environment and testdata 
+- Then I will ask the developer to check the logs in dynamo DB..
+
+--------------------------------------------------------------------------------------------------------------------
+
+How do you solve if there any conflict with your peer QA on any technical aspect?
+
+- Understand their viewpoint first
+- Instead of opinions, Refer to requirements, acceptance criteria, code behavior, logs, or test results.
+- Reproduce and validate together
+- Involve a neutral stakeholder if needed
+- Ensure the decision is captured to avoid future confusion.
+
+--------------------------------------------------------------------------------------------------------------------
+
+How do we decide if the test case is not ideal for automation?
+
+- Highly unstable or frequently changing → high maintenance cost.
+- One-time or rarely executed tests don’t justify automation effort.
+- Visual look & feel, UX, or exploratory scenarios need human judgment.
+- Third-party limitations CAPTCHA, OTP, external systems not controllable.
+
+--------------------------------------------------------------------------------------------------------------------
+
+What is the most interesting bug that you have found recently?
+
+One interesting bug I found was during exploratory testing in a rarely used part of the application
+
+In our app flow: Sites → Entities → Components → Impacted Objects tab
+This tab had a search bar to filter impacted objects by name
+
+Issue:
+  The search worked fine for normal text, but failed for names containing special characters like underscore (_)
+  Since this tab was rarely used and a corner case, the issue was missed earlier
+
+What I did:
+  Reproduced and validated with different inputs
+  Identified that the issue was due to a common controller-level filtering logic
+  Extended testing across the application
+
+Impact:
+  Found that the same issue existed in multiple search fields across the app (especially with _ and &)
+  Helped fix it at a centralized level, preventing multiple defects
+
+--------------------------------------------------------------------------------------------------------------------
+
+In Agile environments, in case you have any doubts regarding your project, how do you approach?
+
+- In Agile, I resolve doubts quickly through collaboration and fast feedback.
+- I will prefer Short calls or standups instead of waiting on emails/messages
+- For domain related queries, I will connect with PO/BA
+- For technical queries, I will connect with developers
+- For knowing the past approach, decisions taken and discussions, I will connect with peer QAs
+- I will also documents these side by side
+
+--------------------------------------------------------------------------------------------------------------------
+
+As a tester, how do you differentiate a dummy login page which is exactly designed like your working project login page?
+
+- Check API/network calls
+  Real login will hit actual auth APIs and return tokens/session IDs; a dummy page won’t.
+- Session/cookie handling
+  Real app creates valid session cookies/JWT; dummy pages usually don’t.
+- Logs & DB validation (if accessible)
+  Confirm whether user authentication is recorded in backend systems.
+
+--------------------------------------------------------------------------------------------------------------------
+
+How will you tell if enough test cases have been created to test your product?
+
+- Go through all the acceptance criteria and check if all the requirements are mapped to atleast one testcase.
+- For each test scenario, there should be positive, negative and boundary value test cases.
+- Analyse the defects trend, fewer defects found over time -> indicates good coverage
+- Regression suite completeness -> Core functionalities are part of regression and automated where possible.
+- Stakeholder confidence -> Product, dev, and QA are aligned that major scenarios are validated.
+
+--------------------------------------------------------------------------------------------------------------------
