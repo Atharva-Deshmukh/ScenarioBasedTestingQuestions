@@ -1,0 +1,216 @@
+Tell me about yourself
+
+- Good morning/afternoon, and thank you for giving me this opportunity to introduce myself. 
+  My name is Atharva Deshmukh.
+
+- I am currently working as a Software Development Engineer in Test at Siemens Technologies and Services, w
+  here I have over 3 years of experience in test automation and quality engineering for web and mobile applications.
+
+- I primarily work with Playwright, Cypress, JavaScript/TypeScript, API testing, and CI/CD pipelines. 
+  I have experience building automation frameworks from scratch, migrating Cypress frameworks to Playwright, 
+  and automating critical regression workflows to improve release quality and reduce manual effort. 
+  I have also worked on performance testing using K6 and collaborated closely with cross-functional Agile teams.
+
+- Although I am happy with my current role, I am now looking for a more challenging SDET-2 opportunity where 
+  I can further enhance my technical skills, 
+  take more ownership, and contribute to a larger scale.
+
+  Thank you.
+
+---------------------------------------------------------------------------------------------------
+
+Tell me about the time when you failed.
+
+- Nobody is perfect, and I have also learned important lessons from failures during my testing journey.
+
+- One situation I clearly remember was early in my automation experience with Cypress. 
+  I was assigned to automate a large feature, and I became too focused on building a highly reusable and generic framework. 
+  I ended up creating a very complex implementation with many switch-case conditions instead of focusing on delivering the 
+  actual test coverage quickly.
+
+- Although the framework was reusable, I missed the sprint deadline for completing the automation tasks, 
+  which impacted the team’s validation timeline.
+
+- That experience taught me an important lesson about balancing engineering quality with delivery timelines. 
+  Since then, I focus first on building a minimum viable automation solution to meet deadlines, 
+  and then improve or refactor the framework incrementally when needed.
+
+
+---------------------------------------------------------------------------------------------------
+
+What are your strengths and weaknesses?
+
+Strengths:
+
+* Strong analytical and problem-solving skills
+* Detail-oriented while testing and debugging
+* Team player and good collaboration with cross-functional teams
+* Reliable, adaptable, and quick learner
+
+Weaknesses:
+
+* Sometimes become overly focused on details or over-engineering the framework design
+* Earlier, I spent extra time trying to make automation too perfect, this also delayed the releases
+
+---------------------------------------------------------------------------------------------------
+
+If you get extra task by manager and you don't have enough time to complete it, how will you manage it?
+
+- I have handled similar situations before
+- Whenever I get assigned an extra task, I first clarify the priority with my Scrum master and my line manager so I can plan and 
+  reprioritize my existing work accordingly.
+- If the task is business-critical and needs immediate attention, I am flexible enough to stretch my working hours 
+  and ensure the task is completed on time to avoid impacting other deliverables.
+
+---------------------------------------------------------------------------------------------------
+
+What is the last book you read?
+
+- Recently, instead of books, I have been actively following testing and automation blogs to stay updated with industry practices.
+
+- I regularly follow LambdaTest and StickyMinds blogs, along with Cypress experts like Gleb Bahmutov and Filip Hric. 
+  Their content has helped me improve my automation practices, debugging approaches, and overall tester mindset.
+
+- I am also reading a self-help Book Deep Work by Cal Newport to improve my productivity
+
+---------------------------------------------------------------------------------------------------
+
+What is your salary expectation?
+
+- Tip 1: Be flexible if providing expectation. (ONLY WHEN u know exact salary range)
+
+  (Provided, you have already researched salary range say 15-20 lpa, start with the higher one, 20 lpa, this gives HR a perspective 
+  that u already know the range and u aim for higher part of that range) Based on my experience, skillset and market research, 
+  I would expect to earn <Salary figure> (Mention the higher range of salary). 
+  
+  However, salary is not a constraint for this role and your company. I am flexible and open for negotiation.
+
+  Here, you have a chance of higher negotiation.
+
+- Tip 2: Ask recruiter about typical salary for that role. (Only when u are blank about the range)
+
+ That's a good question. It would be really helpful to me if you could share what a person with my skillset and qualifications 
+ typically earns in this role with your organization.
+
+---------------------------------------------------------------------------------------------------
+
+How do you organise your work?
+
+- I usually organize my work based on sprint priorities and delivery timelines.
+- During sprint planning, I get allocated user stories, defects, and automation tasks. 
+  I first create a clear task list on my kanban board under those workitems I am assigned.
+
+- I then prioritize the work based on sprint goals and release priorities
+  I also try to timebox tasks and track progress regularly
+
+---------------------------------------------------------------------------------------------------
+
+How will you handle an uncooperative colleague?
+
+- I would first try to understand the reason behind the uncooperative behavior 
+  instead of making assumptions.
+- Sometimes, a colleague may be busy, under pressure, or may feel that the questions
+  being asked are already documented. In such cases, I first check on my side whether 
+  I can improve my preparation, ask clearer questions, or refer existing documentation 
+  before reaching out.
+- If the person is difficult to connect with due to workload or time constraints, 
+  I prefer scheduling a focused discussion with clear agendas so that we can resolve all 
+  queries efficiently in one go.
+- However, if the behavior continues to impact team collaboration or project delivery 
+  unnecessarily, then I would involve my lead or senior stakeholders professionally, 
+  because ultimately everyone is working toward the same project goals.
+
+---------------------------------------------------------------------------------------------------
+
+How would you deal with conflict with a colleague?
+
+- Instead of reacting immediately, I would first try to understand the root cause 
+- I would set up a discussion with them to calmly listen to their perspective and also explain my point of view professionally. 
+  I won't take it personally, especially in a team environment where everyone is working toward the same goal.
+- My focus would be on finding a practical solution and reaching a mutual understanding that helps the 
+  team and project move forward smoothly.
+
+---------------------------------------------------------------------------------------------------
+
+What motivates you?
+
+- When my work creates a positive impact for both the team and end users.
+- As an SDET, I enjoy improving software quality and building automation solutions that reduce manual effort, 
+  improve efficiency, and provide good ROI to the company.
+- I am also motivated by learning new technologies, improving my technical skills, 
+  and taking ownership of challenging tasks.
+- I also enjoy sharing the knowledge with others. I used to give KTs to many new joiners in current organisation.
+
+---------------------------------------------------------------------------------------------------
+
+Can you tell us about your biggest achievement?
+
+- One of my biggest professional achievements was building and scaling automation frameworks from scratch 
+  for my current project at Siemens.
+- When I joined the project, many critical workflows were either manually tested or had limited automation coverage. 
+  I identified repetitive regression scenarios and started developing scalable automation solutions using Cypress and later Playwright.
+- I also contributed to migrating the existing Cypress framework to Playwright, which improved execution speed, reliability, 
+  and cross-browser coverage significantly.
+As a result, we were able to automate around 60% of critical regression workflows, which reduced manual testing effort, 
+improved release confidence, and I received Star Awards for performance excellence.
+
+---------------------------------------------------------------------------------------------------
+
+Are you good at handling pressure?
+
+- Yes, I believe I handle pressure well. In testing and release cycles, pressure situations are quite common, 
+  especially during tight sprint timelines, or release deadlines.
+- In such situations, I first try to ANALYSE the problem calmly and understand the impact. 
+  Then I quickly PRIORITIZE tasks and create a practical plan of action instead of getting stressed.
+
+- For example, in one of my projects, we had critical pipeline failures and last-minute testing activities before release. 
+  I collaborated with the team, reprioritized the testing scope, focused on high-risk areas first, 
+   and ensured the automation pipelines were stabilized on time.
+
+---------------------------------------------------------------------------------------------------
+
+How do you improve yourself?
+
+- During Sprint retros, I specifically take a note of the issues caused due to me and I try to 
+  think of them, find the ways that they don't happen again.
+- This happened once that there was a scenario between the lines I assummed it works, so not 
+  tested it, since other functionalities dependent on it worked
+  The same scenario later broke after INT deployment.
+
+  This is where I learned: "Never assume anything in testing!"
+
+---------------------------------------------------------------------------------------------------
+
+What are your hobbies and interests outside work?
+
+- Reading self-help books
+- Movies and Music
+- Travelling
+
+---------------------------------------------------------------------------------------------------
+
+What is an ideal job for you?
+
+- Where I can work on challenging automation and quality engineering problems while 
+  continuously learning new technologies.
+- I enjoy building scalable automation frameworks, improving testing processes, 
+  and contributing to overall product quality. 
+- In the long term, I would like to grow into a strong SDET who can take ownership of 
+  quality initiatives, mentor team members, and contribute to automation strategy and technical decisions.
+
+---------------------------------------------------------------------------------------------------
+
+How flexible are you regarding overtime?
+
+- I am flexible to work extended hours whenever the project requires additional support,
+  especially during critical releases, production issues.
+- In my current role as well, I have supported last-minute testing activities and 
+  pipeline issues whenever needed. 
+- At the same time, I also try to manage work efficiently and proactively to minimize 
+  last-minute pressure wherever possible.
+
+---------------------------------------------------------------------------------------------------
+
+
+
+---------------------------------------------------------------------------------------------------
