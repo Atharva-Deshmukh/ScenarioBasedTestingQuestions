@@ -211,6 +211,111 @@ How flexible are you regarding overtime?
 
 ---------------------------------------------------------------------------------------------------
 
+How will you communicate with different teams? With other team members?
 
+With team members:
+- As soon as I join the organisation, I will introduce myself to all the immediate team members to build 
+  rapport (pronounced as rappo) with them.
+- I will also try to personally connect with the team members face to face and understand 
+  what everyone is working on.
+
+With different teams:
+- The members from different teams will be having their own prorities and hence I will be trying 
+  to schedule a free time slot from their calendar.
+- I will go ahead and schedule a meeting on teams or if possible, face to face.
+- I will take official route rather than pinging for help unless I build proper rapport.
+
+---------------------------------------------------------------------------------------------------
+
+What are you looking for in your next role?
+
+- Do not say anykind of monetary benefit.
+
+I am happy in my current role and with my current organisation. However, in terms of 
+learning opportunities, I want to take on more challenging responsibilities where 
+I can grow both personally and professionally while working on more recent and cutting-edge technologies.
+
+In my current role, the learning opportunities have become somewhat limited, and that is one of the key reasons 
+I am exploring a new role. I am looking for an environment where I can continuously improve 
+my technical skills, contribute to complex projects, and expand my exposure as an SDET.
+
+I have learned that your organisation works on modern technologies and engineering practices, 
+and I believe it would provide me with ample opportunities to learn from experienced colleagues 
+and grow technically in my next role. Along with technical growth, I am also looking for 
+a positive team culture and a collaborative work environment where people support each 
+other and work towards common goals.
+
+---------------------------------------------------------------------------------------------------
+
+Where do you see yourself in five years?
+
+- Answer should align with this role like growing deep in this role, 
+  being in the same company like seeking more senior role in the same organisation.
+
+- In five years, I see myself growing into a leadership role such as a Senior SDET, Lead SDET, 
+  or even a Test Architect within this organization. 
+  
+- My goal is to not only deepen my expertise in test automation but also contribute to shaping the 
+  testing strategies and mentoring junior team members.
+
+---------------------------------------------------------------------------------------------------
+
+Why do you want to work with us?
+
+- Research about employer,their recent services and product that excites you
+- Company values and work culture
+- Companies achievements and impact its making on the society
+- Tell them about their really amazing products
+
+=> Your organization is well known into testing space both locally and internationally 
+   for the impact it is creating in <depending on company> domain and I am sure there 
+   are immense possibilities for my long term future with your company.
+
+=> This role appealed me most because it requires strong testing/test automation skills which 
+   perfectly suited with my current skills. As testing/automation is always evolving so working 
+   with market leaders like you will help me to always upgrade as per latest market trends.
+
+---------------------------------------------------------------------------------------------------
+
+What kind of work environment do you prefer to work in?
+
+- I am quite flexible when it comes to work environment preferences. However, I enjoy working in a 4
+  collaborative, learning-oriented environment where team members support each other and openly share knowledge.
+
+- From what I have learned about your organization, the engineering teams work on modern technologies and 
+  continuously evolve with new challenges and domains. 
+- I find that very exciting because I enjoy environments where there are opportunities to learn, 
+  contribute ideas, and grow technically.
+
+- I also prefer a culture where communication is open, feedback is valued, and quality is considered an 
+  important part of the development process. As an SDET, I enjoy working closely with developers, 
+  product managers, and QA teams to deliver reliable and high-quality products.
+
+---------------------------------------------------------------------------------------------------
+
+Why did you apply for this job?
+
+- This job description states that you are looking for an SDET with strong 
+  Software Testing and Test Automation skills, and I believe my experience 
+  aligns very well with these expectations.
+
+- With my background in test automation, quality engineering, API testing, and automation 
+  framework development, I am confident that I can contribute effectively and bring value to 
+  the team from day one.
+
+- What particularly attracted me to this opportunity is that the role looks both challenging and exciting. 
+
+- I am also looking for opportunities where I can take on greater responsibilities
+
+---------------------------------------------------------------------------------------------------
+
+How long do you plan to remain with this company?
+
+- I would prefer to stay with the company for the long term, provided there are continuous opportunities 
+  to learn, grow, and contribute meaningfully. The role itself is very appealing to me because it is 
+  technically challenging and aligns well with my career goals in Software Testing and Test Automation.
+
+- Additionally, the company’s growth plans, evolving projects, and opportunities to work on new domains 
+  and technologies make this an exciting place to build a long-term career. 
 
 ---------------------------------------------------------------------------------------------------

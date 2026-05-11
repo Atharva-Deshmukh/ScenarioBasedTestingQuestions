@@ -1,0 +1,684 @@
+--------------------------------------------------------------------------------------------------------------------
+
+How will you test customer registration web page?
+
+- Before jumping to the answer, always clarify the requirements from interviewer 
+  and then start answering...
+- How many fields on page
+- Which API (SOAP/REST etc.)
+- Which DB is used
+- Which business rules for registrations
+
+--------------------------------------------------------------------------------------------------------------------
+
+How will you approach testing a user story in agile project?
+
+- Understand the story by reading Acceptance Criteria and the test design if there is any.
+- Make sure every detail of the user story is clear to me. Connect with stakeholders for this.
+- Define high level test scenarios.
+- Cover the impact areas to other existing features.
+- Priority will be what parts of the story are in the scope of the current sprint. Rest will be planned later.
+- Elaborate the high level test cases into test scenarios using BDD syntax.
+
+--------------------------------------------------------------------------------------------------------------------
+
+How will you overcome the challenge of having limited/inaccurate documentation for testing?
+
+- A software is never created without any requirement, there may be some requirements that are 
+  either not properly documented or there is less documentation.
+  So, I will try to find out if there are any available related documentations.
+- Talk to Subject Matter Experts, POs, Team members, architects..
+- Document high level functionalities based on discussions with above.
+- I will Apply exploratory testing and then document the test cases on the go.
+
+--------------------------------------------------------------------------------------------------------------------
+
+Why is regression testing in agile development challenging and how will you handle it?
+
+- Agile testing is an iterative approach.
+- New code/features are added every sprint on the top of the existing code.
+- They may introduce new defects and there are defect fixes every sprint.
+- Each time the code is merged, we need to do a regression test every time, 
+  hence regression tests need to be automated.
+- Some basic sanity tests also need to be automated.
+
+"How" part of the answer:
+- Risk based approach to testing.
+- It is generally done when we don't automate our tests or there is no automation resource and 
+  support from leadership.
+- We ask developers the key features to be developed in this sprint and their impact areas, 
+  so that we can write manual tests for those impacted areas and reduce risks by testing them.
+- See, with each sprint, our regression test suites keep adding new tests in it. 
+- So, lets say after last 4 sprints, we have 50 TCs in the regression suite, it is not feasible 
+  to execute all 50 in the 5th sprint along with TCs of this sprint.
+- Hence, Risk Based Testing is necessary, where we identify risky areas and test only those.
+- We can also automate the regression test suites in that sprint itself to reduce overhead.
+
+--------------------------------------------------------------------------------------------------------------------
+
+How will u test cookies?
+
+- LATER: show them for cookies in cypress
+
+What are Cookies?
+Cookies are small pieces of data stored on the user's browser by a website. 
+They are used to remember information about the user, such as login status, preferences, 
+or session data. Cookies are essential for stateful communication between a client and 
+server, especially in web applications.
+
+Testing Cookies Scenario-Wise
+
+1. Validation of Cookie Creation
+Scenario: When a user logs into the application, cookies should be created with the correct attributes.
+
+Steps:
+Log in to the web application.
+Open the browser's developer tools (F12) and navigate to the "Application" tab 
+(or equivalent in other browsers).
+Check the cookies stored under the website's domain.
+
+Validate:
+Cookie name and value.
+Secure, HTTPOnly, and SameSite flags.
+Expiry date/time.
+
+2. Validation of Cookie Updates
+Scenario: When a user performs specific actions (e.g., changing language or preferences), 
+the cookies should update accordingly.
+
+Steps:
+Perform the action (e.g., switch language).
+Check the updated cookies in the browser's developer tools.
+
+Validate:
+If the cookie's value has been updated as per the change.
+If other attributes remain consistent unless explicitly updated.
+
+3. Expiry of Cookies
+Scenario: Cookies should expire at the specified time or when the session ends.
+
+Steps:
+Check the expiry date/time of cookies in the browser's developer tools.
+Wait until the cookie expires.
+Refresh the page or interact with the site.
+
+Validate:
+The expired cookie is no longer available.
+A new cookie is created if necessary.
+
+4. Secure and HTTPOnly Flags
+Scenario: Cookies containing sensitive data should have Secure and HTTPOnly flags enabled.
+
+Steps:
+Open the browser's developer tools and inspect the cookie attributes.
+
+Validate:
+Secure flag is set for cookies used over HTTPS.
+HTTPOnly flag is enabled to prevent access via JavaScript.
+
+5. SameSite Attribute
+Scenario: Ensure cookies are protected against cross-site request forgery (CSRF).
+
+Steps:
+Check the SameSite attribute of the cookie in the browser's developer tools.
+
+Validate:
+SameSite=Lax for most scenarios (default behavior).
+SameSite=Strict for high-security areas.
+SameSite=None with Secure for third-party cookies.
+
+6. Behavior on Logout
+Scenario: Cookies should be deleted or invalidated upon logout.
+
+Steps:
+Log into the application.
+Log out of the application.
+
+Validate:
+Session cookies are cleared.
+Persistent cookies (if any) are appropriately reset or removed.
+
+7. Cross-Browser Testing
+Scenario: Verify cookies work consistently across multiple browsers.
+
+Steps:
+Test the application's cookie behavior on different browsers (e.g., Chrome, Firefox, Edge, Safari).
+
+Validate:
+Cookie creation, updates, and deletions behave consistently.
+
+11. Security Testing
+Scenario: Ensure cookies are secure from vulnerabilities.
+
+Tests:
+Session Hijacking: Validate that cookies cannot be easily intercepted or reused (use HTTPS and Secure flags).
+Session Fixation: Verify session cookies are regenerated upon login.
+Cookie Theft Prevention: Ensure HTTPOnly is set to protect cookies from JavaScript-based attacks.
+
+--------------------------------------------------------------------------------------------------------------------
+
+If the software is currently in production and one of the code module is modified. 
+Will you retest the whole application or just test the funcionality associated with 
+that module?
+
+- Ask the interviewer the level impact and importance of this failing module
+
+- Then only we can decide how much testing we need to do.
+
+- If this is an independent module with no impact on other modules, then I will do 
+   regression test on this module only.
+  
+- If this module is some core module, which can impact several other modules,
+   then regression testing must be done for this modules as well as other impacted ones.
+   
+                       module 2
+                         ^
+                         |
+         module 4 ---> module 1 <--- module 3
+		                 |
+					   module 5
+
+- Connect with developers to know the impact and connection of the changed module with other modules and plan 
+  the testing accordingly.
+
+--------------------------------------------------------------------------------------------------------------------
+
+Do you agree that the tester should study design documents for writing test cases?
+
+- It is absolutely necessary for a tester.
+- There will be two types of design documents: High level and low level
+- High level: They are the documents that are created by the solution architects and 
+  will have high level architecture for showing various module interactions.
+  It gives idea of what systems, third party softwares and modules are in our software.
+  
+  Going through this high level design documents gives the tester the overall picture of the application 
+  that he is going to test.
+  
+  Helps to write end to end test cases.
+  Helps to wrtie integration test cases between different modules.
+  
+
+- Low level: Here, the high level design is elaborated into lower level details.
+  Ex: the list of all APIs being used in the application. (Swagger)
+  It helps to plan regression test suites, like automation for APIs.
+  
+- The tester can also help to rectify the mistakes or any missing thing in these documents found while testing.
+
+--------------------------------------------------------------------------------------------------------------------
+
+You are managing a team of 5 testers which is not co-located, how will you ensure team productivity?
+
+- So, there is also the difference of time-zone since some members of team are remote.
+- Ensure the daily standup for the testing team specifically for 5 mins atleast.
+- Since different timezones are involved, I will ask the team if they are comfirtable with the time frame 
+  that is overlapped.
+- Will ensure whole test team is helping each other.
+- I will ensure my team has enough work in their plate and also the backup work like pipeline 
+  fixes to work on in case they are stuck and I have logged off.
+- I will also be flexible to take calls if something urgent needs my attention.
+
+--------------------------------------------------------------------------------------------------------------------
+
+What will be your approach to Create a Test Case?
+
+- First read and understand the requirements
+- Clarify doubts if any
+- Document high level scenarios
+- Apply test design techniques to refine those scenarios
+- Document test case steps
+- Get the test cases peer reviewed
+
+--------------------------------------------------------------------------------------------------------------------
+
+10. Can you explain few scenarios for testing Pagination?
+
+Ask interviewer, how many entries are there initially for pagination
+
+If 10 results per page
+- Look and feel (Design, type, color, hyperlink etc.)
+- Next and Previous button
+- If on last page (Next should be disabled)
+- If on first page (previous button should be disabled)
+- Clicking next button navigate user to next page
+- Clicking previous button navigate user to previous page
+- Test behavior when results are more than 10
+- Test behavior when results are less than 10
+- Test page when zero results
+- Pagination accessibility
+
+
+Testing Pagination in Postman:
+
+- The query parameters like "limit" and "offset" are used for pagination
+  But they must be implemented by backend.
+
+- offset: if offset = 2, give response from 3rd to end
+- limit: if limit = 4, give 4 responses only
+
+Ex:  GET https://api.example.com/users?limit=4&offset=0
+{
+  "data": [
+    { "id": 1, "name": "Alice" },
+    { "id": 2, "name": "Bob" },
+    { "id": 3, "name": "Charlie" },
+    { "id": 4, "name": "David" }
+  ],
+  "metadata": {
+    "total": 12,
+    "limit": 4,
+    "offset": 0,
+  }
+}
+
+- Verify in the metadata (response) the link for next page and previous page.
+
+--------------------------------------------------------------------------------------------------------------------
+
+11. Can you write some Test Cases for Radio Button?
+
+Ask the business logic for button.
+
+- Check if the button is enabled.
+- Radio button look and alignment
+- Gets selected when user selects the button
+- Check if multiple button gets selected
+- Label text
+- Validate the selection persists in data base
+- Alert message if no selection is made and user submits
+- any default selection?
+
+--------------------------------------------------------------------------------------------------------------------
+
+What will be your approach to test the responsive web based application?
+
+- ASK INTERVIEWER: web based or mobile based (Android or IOS)?
+
+- If web based, on which browsers will the application be compliant on.
+- Do we have API swagger to cover API automation 
+- Create Test plan and categories Manual and Automted test cases, 
+  leverage automation tools
+- Plan for performance tests.
+
+--------------------------------------------------------------------------------------------------------------------
+
+How will you test the application which requires integration with the third party
+systems/APIs which are not available? (by 3rd party APIs, 
+we mean some modules/utilities developed by some other party and we are just 
+using it. The 3rd party provider will not provide any API or any test 
+environment mostly).
+
+ex: OAuth service
+- The 3rd party provider will always provide with documentation based on which the developers 
+  create mock API stubs/mimics to send response in the way that is acceptable by the 3rd party API.
+- Ans: if the developers are already using such tools, then we will be using the same instead of 
+  setting up separately for testing. This will reduce test efforts.
+- In case the developers are not covering full use cases, we from testing side will add our own 
+  test cases to ensure full coverage.
+
+--------------------------------------------------------------------------------------------------------------------
+Suppose you find a bug in production, how would you make sure the same bug is not introduced again?
+- First, I’d do a quick root cause analysis to understand why it escaped—whether 
+  it was due to missing test coverage, an edge case, or a gap in our automation or review process.
+
+- Next, I’d create a automated test for the issue at the UI or API level.
+  This test should fail first before the fix is deployed and pass after, 
+  so we permanently capture the bug in our regression suite.
+
+- Finally, I’d share the learnings with the team and update our test strategy and test suite
+
+--------------------------------------------------------------------------------------------------------------------
+
+What do you do when your developers denies that what you filed is a Bug?
+
+- I don’t treat it as a conflict—I treat it as a misalignment in understanding.
+- First, Then I make sure the issue is clearly reproducible
+- I will provide the testdata I used
+- I will provide the relevant part of the Acceptance Criteria
+- In case of any ambuity in understanding, I will loop in the Product Owner (PO)/ Business Analyst (BA)
+
+--------------------------------------------------------------------------------------------------------------------
+
+You have large number of test cases to execute but limited timeframe to complete testing. What will be your approach to ensure proper test coverage?
+- ASK INTERVIEWER: do we have enough resources (no. of testers) to test?
+- large number of test cases means exactly how much?
+- given current capacity and resources, how many test cases we can cover?
+- Is there automation done already?
+- Are there any features pending from developers side for this feature or we have dependency of some kind?
+
+- Let's say we have 1000 test cases, 5 testers and we can execute only 200 test cases in the given time frame.
+- Follow Risk-Based Testing and cover only those test cases on priority that will impact the current release features.
+- Collaborate with stakeholders and devs to identify the high risk areas/impacted areas
+- Developers will help you know the modules they have touched
+- The business analysts POs will help you identify the workflow that is MUST to test for this release regardless of developer touched this part or not.
+- I will develope the test suite that has enough coverage to satisfy all the business stakeholders and then finally I will execute those.
+
+--------------------------------------------------------------------------------------------------------------------
+
+What has been your greatest challenge while doing regression testing?   
+
+- Maintaining the regression suite as the application scaled.
+- as more features were added, our regression suite became large, slow, and flaky. 
+  Test execution time increased significantly, and failures were often due to instability rather than 
+  real defects. This started impacting release timelines and reduced confidence in automation.
+- I analysed the flaky tests and fixed them wherever possible, like locator update issue, testdata deletion
+- I then prioritised the tests according to the service packs using tags, we modified regression tags
+  Not everything needs to be run everytime
+
+--------------------------------------------------------------------------------------------------------------------
+
+You have large number of test cases to execute but limited timeframe to complete testing. 
+What will be your approach to ensure proper test coverage?
+
+- ASK INTERVIEWER: do we have enough resources (no. of testers) to test?
+- large number of test cases means exactly how much?
+- given current capacity and resources, how many test cases we can cover?
+- Is there automation done already?
+- Are there any features pending from developers side for this feature or we have dependency of some kind?
+
+- Let's say we have 1000 test cases, 5 testers and we can execute only 200 test cases in the given time frame.
+- Follow Risk-Based Testing and cover only those test cases on priority that will impact the current 
+  release features.
+- Collaborate with stakeholders and devs to identify the high risk areas/impacted areas
+- Developers will help you know the modules they have touched
+- The business analysts POs will help you identify the workflow that is MUST to test for this release 
+  regardless of developer touched this part or not.
+- I will develope the test suite that has enough coverage to satisfy all the business stakeholders 
+  and then finally I will execute those.
+
+--------------------------------------------------------------------------------------------------------------------
+
+Enlist some of the key challenges that are faced while performing sofware testing
+
+- Test Environment Issues like Data inconsistencies
+- Tight Deadlines:
+  Limited time for full regression
+  Pressure to sign off quickly
+  This Forces prioritization of critical scenarios.
+- Requirements often evolve during development, this leads to
+  Rework in automation and manual testing
+
+--------------------------------------------------------------------------------------------------------------------
+
+What are the drawbacks of the agile methodology / Implementation you faced?
+
+- Sprints are usually very deadline constrained
+- Documentation is not the priority
+- while it promotes speed and flexibility, it can sometimes lead to insufficient clarity in requirements, 
+  especially at the start of a sprint.
+- In a few cases, user stories were not detailed enough, which caused misalignment between development 
+  and testing. This led to rework, late defect discovery, and sometimes scope changes mid-sprint.
+- Another challenge is compressed testing timelines. Since development and testing happen in the same sprint, 
+  testing often gets pushed toward the end, leaving limited time for proper regression and edge case validation.
+- In my current organisation, we earlier got the feature to test after it was fully coded and deployed to INT, 
+  but this led to rework and delay when defects were found, so we started to deploy on feature environment first
+
+--------------------------------------------------------------------------------------------------------------------
+
+What is your approach when you have a high priority release to be delivered in a very short time?
+
+- I would stay flexible and focus on ensuring product quality while adapting to the new timeline.
+
+- I would replan the remaining testing tasks according to the new release schedule
+
+- my approach is to focus on risk-based testing and fast feedback, rather than trying to test everything.
+- First, I quickly understand the scope and impact of the release — which areas of the system are affected, 
+  and what the business-critical flows are. 
+- Then I would discuss with stakeholders to identify critical test scenarios
+- I will also ask for for help or additional
+  support from the team if required to meet the deadline without compromising quality.
+
+- Then I rely heavily on automation:
+  Run a smoke suite or critical regression suite in CI/CD to get quick confidence
+  Ensure all existing stable automated tests are passing
+
+--------------------------------------------------------------------------------------------------------------------
+
+Give an example of high priority and low severity bug
+
+    Severity → How bad is the defect technically?
+    Priority → How urgently it needs to be fixed?
+
+- A typo or incorrect label on the payment/checkout page.
+
+    Why this fits:
+        Severity: Low
+            It doesn’t break functionality
+            System still works fine
+        Priority: High
+            It’s user-facing and visible to all users
+            Impacts brand credibility and user trust
+            Needs immediate fix before/after release
+
+- Incorrect currency symbol displayed during checkout (e.g., showing $ instead of ₹).
+
+- Wrong logo on home page
+
+--------------------------------------------------------------------------------------------------------------------
+
+Explain what will be your reaction if the project you have been working on got sudden change in its deadline?
+
+- my first reaction is to stay calm and reassess the situation, rather than trying to rush testing blindly.
+- Then I shift to a risk-based testing approach:
+
+    Prioritize business-critical workflows
+    Focus on areas impacted by recent changes
+    Identify high-risk integrations or complex logic
+
+    Next, I leverage automation for fast feedback:
+
+    Run smoke or critical regression suites through CI/CD
+    Ensure existing stable tests are passing
+
+    For manual testing, I focus on:
+
+    Exploratory testing in high-risk areas
+    Edge cases that automation may not cover
+
+    At the same time, I communicate clearly with stakeholders:
+
+    Highlight what will be tested vs what may be partially tested - Partial release possibility
+    Call out any risks or potential gaps early
+
+--------------------------------------------------------------------------------------------------------------------
+
+If a small section of code in your application is updated, what is your testing approach in validating it?
+
+- my approach is to validate the change thoroughly while minimizing unnecessary testing effort, 
+  using a targeted, risk-based strategy.
+
+--------------------------------------------------------------------------------------------------------------------
+
+What are your daily activities as a member of automation tester in your office?
+
+- Running smoke suite daily and monitoring the regression pipelines
+- Verifying defects assigned to me and concluding them accordingly
+- Working on manual and automation testing for stories in current sprint
+
+--------------------------------------------------------------------------------------------------------------------
+
+How do you select regression test cases or form the regression test suite?
+
+I keep it a risk-based approach.
+- Identify modules affected by the recent changes.
+- Prioritize critical business flows
+- Include previously failed/bug-prone areas
+- Prefer tests already automated, reliable, and fast (CI-friendly).
+- Continuously optimize suite by Removing redundant tests, tag by priority (P0/P1/P2), and keep execution time efficient.
+
+--------------------------------------------------------------------------------------------------------------------
+
+How you ever managed writing test cases without having any documents?
+
+I have handled this kind of ambiguity once when we developed a new mobile app and there was no documentation for it.
+- Explore the application (Exploratory Testing)
+- Sync with developers, product managers, or business analysts to understand expected behavior.
+- Focus on user journeys Build test cases around real-world usage instead of waiting for perfect requirements.
+- Go throught the production bugs logged before and check if those workflows are touched.
+- Iterate and refine
+
+--------------------------------------------------------------------------------------------------------------------
+
+What is the first action you perform as a tester when the application throws any weird errors?
+
+- I will try to reproduce this consistently and capture the evidence
+- I will check console logs to see if any JS errors are there
+- I will also analyse networks tab
+- Validate the test environment and testdata 
+- Then I will ask the developer to check the logs in dynamo DB..
+
+--------------------------------------------------------------------------------------------------------------------
+
+How do you solve if there any conflict with your peer QA on any technical aspect?
+
+- Understand their viewpoint first
+- Instead of opinions, Refer to requirements, acceptance criteria, code behavior, logs, or test results.
+- Reproduce and validate together
+- Involve a neutral stakeholder if needed
+- Ensure the decision is captured to avoid future confusion.
+
+--------------------------------------------------------------------------------------------------------------------
+
+How do we decide if the test case is not ideal for automation?
+
+- Highly unstable or frequently changing → high maintenance cost.
+- One-time or rarely executed tests don’t justify automation effort.
+- Visual look & feel, UX, or exploratory scenarios need human judgment.
+- Third-party limitations CAPTCHA, OTP, external systems not controllable.
+
+--------------------------------------------------------------------------------------------------------------------
+
+What is the most interesting bug that you have found recently?
+
+One interesting bug I found was during exploratory testing in a rarely used part of the application
+
+In our app flow: Sites → Entities → Components → Impacted Objects tab
+This tab had a search bar to filter impacted objects by name
+
+Issue:
+  The search worked fine for normal text, but failed for names containing special characters like underscore (_)
+  Since this tab was rarely used and a corner case, the issue was missed earlier
+
+What I did:
+  Reproduced and validated with different inputs
+  Identified that the issue was due to a common controller-level filtering logic
+  Extended testing across the application
+
+Impact:
+  Found that the same issue existed in multiple search fields across the app (especially with _ and &)
+  Helped fix it at a centralized level, preventing multiple defects
+
+--------------------------------------------------------------------------------------------------------------------
+
+In Agile environments, in case you have any doubts regarding your project, how do you approach?
+
+- In Agile, I resolve doubts quickly through collaboration and fast feedback.
+- I will prefer Short calls or standups instead of waiting on emails/messages
+- For domain related queries, I will connect with PO/BA
+- For technical queries, I will connect with developers
+- For knowing the past approach, decisions taken and discussions, I will connect with peer QAs
+- I will also documents these side by side
+
+--------------------------------------------------------------------------------------------------------------------
+
+As a tester, how do you differentiate a dummy login page which is exactly designed like your working project login page?
+
+- Check API/network calls
+  Real login will hit actual auth APIs and return tokens/session IDs; a dummy page won’t.
+- Session/cookie handling
+  Real app creates valid session cookies/JWT; dummy pages usually don’t.
+- Logs & DB validation (if accessible)
+  Confirm whether user authentication is recorded in backend systems.
+
+--------------------------------------------------------------------------------------------------------------------
+
+How will you tell if enough test cases have been created to test your product?
+
+- Go through all the acceptance criteria and check if all the requirements are mapped to atleast one testcase.
+- For each test scenario, there should be positive, negative and boundary value test cases.
+- Analyse the defects trend, fewer defects found over time -> indicates good coverage
+- Regression suite completeness -> Core functionalities are part of regression and automated where possible.
+- Stakeholder confidence -> Product, dev, and QA are aligned that major scenarios are validated.
+
+--------------------------------------------------------------------------------------------------------------------
+
+How do you ensure that all requirements are covered by testing?
+
+- We will use Requirement Tracability Matrix (RTM)
+- RTM maps all the requirements with the test cases. 
+- By using this document one can verify test cases cover all functionality of the application as per the 
+  requirements of the customer.
+- The main purpose of the requirement traceability matrix is to verify that the all requirements of clients 
+  are covered in the test cases designed by the testers.
+- We can either use a simple excel sheet for this or we can create RTM in JAZZ,JIRA.
+- When business analysis people get the requirements from clients, 
+  they prepare a document called SRS (System/Software Requirement Specification) and these 
+  requirements are stored in this document. 
+- If we are working in the Agile model, we call this document Sprint Backlog, and requirements are present in it in the form of user stories. 
+- When QA gets the SRS/Sprint backlog document they first try to understand the requirements thoroughly and 
+  then start writing test cases and reviewing them with the entire project team. 
+  But sometimes it may happen that in these test cases, some functionality of requirements 
+  is missing, so to avoid it we required a requirement traceability matrix.
+
+- Each test case is traced back to each requirement in the RTM. Therefore, 
+  there is less chance of missing any requirement in testing, and 100% test coverage can be achieved. 
+
+Parameters of Requirement Traceability Matrix (RTM):
+- Requirement ID
+- Requirement description
+- Requirement Type
+- Test cases ID 
+
+                                        Types of Traceability Matrix:
+                                        -----------------------------
+
+  Forward traceability matrix
+
+  +------------------+----------------------------------+------------------+--------------+
+  | Requirement ID   | Requirement Description         | Test Case ID     | Status       |
+  +------------------+----------------------------------+------------------+--------------+
+  | REQ-001          | User login functionality        | TC-001           | Passed       |
+  | REQ-002          | Password reset feature          | TC-002, TC-003   | Failed       |
+  +------------------+----------------------------------+------------------+--------------+
+
+  In the forward traceability matrix, we mapped the requirements with the test cases. 
+  Thus, we can verify that all requirements are covered in test cases and no functionality 
+  is missing in test cases.
+
+
+  Backward traceability matrix
+
+  +------------------+-------------------------------+------------------+--------------+
+  | Test Case ID     | Test Case Description         | Requirement ID   | Status       |
+  +------------------+-------------------------------+------------------+--------------+
+  | TC-001           | Test login functionality      | REQ-001          | Passed       |
+  | TC-002           | Verify password reset         | REQ-002          | Failed       |
+  +------------------+-------------------------------+------------------+--------------+
+
+  In the backward traceability matrix, we mapped the test cases with the requirements. 
+  Here we can verify that no extra test case is added which is not required as per our requirements. 
+  It helps you to ensure that any test cases that you have designed can be traced back to the requirements 
+  or user stories, and you are not extending the scope of the work by just creating additional test cases 
+  that can not be mapped to the requirement. The backward traceability matrix is also known as the reverse 
+  traceability matrix.
+
+
+  Bi-directional traceability matrix
+
+  +------------------+----------------------------------+------------------+--------------------------+--------------+
+  | Requirement ID   | Requirement Description         | Test Case ID     | Test Case Description    | Status       |
+  +------------------+----------------------------------+------------------+--------------------------+--------------+
+  | REQ-001          | User login functionality        | TC-001           | Test login functionality | Passed       |
+  | REQ-002          | Password reset feature          | TC-002, TC-003   | Verify password reset    | Failed       |
+  +------------------+----------------------------------+------------------+--------------------------+--------------+
+
+ Its a combination of a forward traceability matrix
+
+
+Advantages of RTM:
+
+- Full test coverage: RTM confirms the 100% test coverage.
+- Verify missing functionality
+- Proper consistent documentation: RTM can help in the effort to provide proper and consistent 
+  documentation for the team.
+
+--------------------------------------------------------------------------------------------------------------------
