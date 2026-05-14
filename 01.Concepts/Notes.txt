@@ -149,6 +149,25 @@ Good test data covers both valid and invalid scenarios.
 
 -----------------------------------------------------------------------------------------------------------------
 
+                                            What is a Test Log?
+                                            -------------------
+
+Its a detailed document that records the sequence of events during test execution. 
+It captures information such as the tests that were run, their execution time, who
+executed them, the environment details, and any incidents or anomalies observed. 
+
+Its helpful for debugging and tracking the progress of testing.
+
+-----------------------------------------------------------------------------------------------------------------
+
+                            What is Test Closure/Test status report?
+                            ----------------------------------------
+
+Wrapping up the test phase by analyzing test results, preparing test
+summary reports, documenting lessons learned, and archiving test artifacts.
+
+-----------------------------------------------------------------------------------------------------------------
+
                         What is an Entry and Exit Criterion in Testing?
                         -----------------------------------------------
 
@@ -475,6 +494,16 @@ SOFTWARE TESTING TYPES
     │   └── Exploratory Testing
     └── Adhoc Testing
 */
+
+19. What is Performance Testing?
+Answer:
+Performance testing evaluates how the system behaves under various loads - ensuring
+speed, responsiveness, and stability.
+Example:
+Testing if an e-commerce website can handle 10,000 users during a sale without slowing
+down or crashing.
+
+I
 
 16. What is Unit Testing?
 Answer:
