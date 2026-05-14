@@ -1,0 +1,794 @@
+﻿                                        What is Software Testing?
+                                        -------------------------
+
+Testing is a set of activities to:
+- Discover defects
+- Evaluate quality
+- Reduce risk
+
+- Testing is NOT just execution as it includes planning, analysis, design, 
+  implementation, monitoring, control, and reporting.
+
+-----------------------------------------------------------------------------------------------------------------
+
+                            Why Do We Say "Testing Is Context Dependent"?
+                            --------------------------------------------
+
+Because the Testing approach depends/adapts based on the type of product, domain, risks, users.
+There is NO one-size-fits-all testing strategy.
+
+- Banking/Healthcare -> Focus on High security, compliance, accuracy required.
+- Gaming Apps -> Focus on performance.
+- E-commerce -> Focus on usability and user experience.
+
+Different Project Types Need Different Testing
+- Startup MVP -> Fast testing, exploratory, rapid feedback.
+- Enterprise System -> Detailed documentation, regression cycles.
+- Safety-Critical System -> Rigorous validation and certification testing.
+
+User Expectations Differ
+- Internal tool -> Basic usability may be acceptable.
+- Customer-facing product -> High usability and reliability required.
+
+Technology Stack Matters
+- Web app -> Browser compatibility testing.
+- API -> Contract and integration testing focus.
+
+-----------------------------------------------------------------------------------------------------------------
+
+                            Importance of Testing
+                            ---------------------
+
+Testers represent real-users during development and ensures that the users' needs 
+are considered during development.
+
+Testing Saves money.
+    When testers are involved early in SDLC in agile processes, inputs from the test team helps identify
+    gaps in requirements and designs well in advance.
+    Because of these, those defects don't go to production
+    Cost of fixing these defects early is far less.
+
+Testing is necessary because defects can cause:
+- Financial loss
+- Reputation damage and loss of customer trust
+- Injury or death (safety-critical systems)
+- Legal penalties
+  Testing mitigates these risks before release.
+
+Software testing also ensures security and performance, since its not just manual testing, it involves
+load testing also
+
+-----------------------------------------------------------------------------------------------------------------
+                               
+                                Difference Between Bug, Defect, and Error?
+                                ------------------------------------------
+
+- Error: A mistake made by the developer during coding.
+         ex: using wrong formula to calculate discount.
+
+- Defect: A deviation from expected behavior found during testing.
+         ex: wrong discunt output in the UI.
+
+- Bug: A confirmed defect that is logged and tracked for fixing.
+       ex: the above wrong discount defect is logged on JIRA as its confirmed.
+
+-----------------------------------------------------------------------------------------------------------------
+
+                        What is the Difference Between Severity and Priority?
+                        -----------------------------------------------------
+
+- Severity: Measures how serious the bug is for the system.
+- Priority: Defines how soon the bug should be fixed.
+
+-----------------------------------------------------------------------------------------------------------------
+
+                                        What is a Test Plan?
+                                        --------------------
+
+    Its a detailed document outlining the testing scope, objectives, resources,
+    schedule, and activities. 
+
+    In a Project, the test plan lists all modules to test and who will test each.
+
+-----------------------------------------------------------------------------------------------------------------
+                                       
+                                        What is a Test Strategy?
+                                        -----------------------
+
+Its a high-level document that outlines the overall testing approach for the
+project, including testing types, scope, tools, and responsibilities.
+
+
+Test Strategy vs Test Plan
+--------------------------
+Test strategy is a high-level document while a test plan is a detailed document.
+
+-----------------------------------------------------------------------------------------------------------------
+
+                                    What is a Test Scenario?
+                                    ------------------------
+
+
+Its a one-line high-level situation to test. 
+It represents what to test, not how.
+Example:"Verify that a registered user can change their password" is a test scenario.
+
+-----------------------------------------------------------------------------------------------------------------
+
+                                What is a Test Case Format?
+                                ---------------------------
+
+
+A standard test case includes:
+
+. Test Case ID
+· Description
+. Pre-conditions
+. Test Steps
+· Test Data
+· Expected Result
+· Actual Result
+
+-----------------------------------------------------------------------------------------------------------------
+
+                                    What is a Test Environment?
+                                    ---------------------------
+
+Its a setup of hardware, software, network, and data configured to run tests. 
+It closely mimics the production environment.
+
+Ex: a mock payment gateway
+
+-----------------------------------------------------------------------------------------------------------------
+
+                                        What is Test Data?
+                                        ------------------
+
+Inputs used while executing test cases, such as usernames, passwords,
+Good test data covers both valid and invalid scenarios.
+
+-----------------------------------------------------------------------------------------------------------------
+
+                        What is an Entry and Exit Criterion in Testing?
+                        -----------------------------------------------
+
+Entry criteria --> defines when testing should begin (e.g., code freeze, stable build given).
+Exit criteria  -->  define when testing is considered complete (e.g., no critical defects, 100% passing rate).
+
+-----------------------------------------------------------------------------------------------------------------
+
+                                    What is a Traceability Matrix?
+                                    ------------------------------
+
+Its a document that maps requirements to test cases. 
+It ensures every requirement is tested and nothing is missed.
+
+-----------------------------------------------------------------------------------------------------------------
+
+                                    What is Acceptance Criteria?
+                                    ----------------------------
+
+These are the conditions defined before development that must be met for a feature to be accepted 
+as complete by the client or product owner.
+
+
+                                Acceptance Criteria Vs Requirement
+                                ----------------------------------
+
+Requirement         = Business need or functionality
+Acceptance Criteria = Conditions to verify the requirement is done and acceptable
+
+Ex:
+
+    Requirement
+    - User should be able to log in using email and password.
+
+    Acceptance Criteria
+    - With valid credentials
+    - Error message appears for invalid inputs
+    - Password field should be masked
+    - Login should redirect to dashboard after success
+
+-----------------------------------------------------------------------------------------------------------------
+
+                                    What is Boundary Value Testing?
+                                    -------------------------------
+
+It involves testing values at the edge of input ranges. It's useful to catch common
+boundary-related bugs.
+
+Example: For a coupon code that works for orders above ₹500, test with ₹499, ₹500, and ₹501.
+
+-----------------------------------------------------------------------------------------------------------------
+
+                                    What is the Defect Life Cycle?
+                                    ------------------------------
+
+
+Its the journey of a bug from discovery to closure. 
+States of a defect: New -> Assigned -> Open -> Fixed -> Retest -> Closed / Reopened
+
+Example: A tester finds an issue with payment failure, logs it in JIRA, it's fixed by the dev,
+retested, and closed.
+
+-----------------------------------------------------------------------------------------------------------------
+
+What is Defect Leakage?
+-----------------------
+
+It happens when a bug that should have been caught during testing is discovered by end users after deployment.
+
+-----------------------------------------------------------------------------------------------------------------
+
+                                            Verification vs validation
+                                            --------------------------
+
+Verification                           | Validation
+---------------------------------------|----------------------------------------
+Are we building the product right?     | Are we building the right product?
+
+Ensures work products conform to       | Ensures the final product meets user and stakeholder needs
+specified requirements                 | 
+
+Often analytical and review-based      | Typically evaluation- and execution-based
+
+Checks against requirements            | Checks against user needs
+
+
+WHEN DOES IT HAPPEN?
+    Verification: Throughout SDLC phases (requirements, design, coding).
+    Validation: After implementation, during system testing and user evaluation.
+
+
+WHO IS INVOLVED?
+----------------
+
+    Verification:
+    - Business Analysts/Product Owners (requirement reviews)
+    - Architects (design validation)
+    - Developers (code reviews, unit testing)
+    - QA Team (review documents & test artifacts)
+
+    Validation:
+    - QA Team (system testing)
+    - Product Owner
+    - Clients / Stakeholders / Product Manager (PM Acceptance)
+    - End Users (UAT, Beta testing)
+
+
+METHODS USED:
+
+    Verification Methods:
+    - Requirement Reviews
+    - Design Reviews
+    - Code Reviews
+    - Walkthroughs
+    - Static Testing
+    - Unit Testing
+    - Integration Testing
+
+    Validation Methods:
+    - Functional Testing
+    - System Testing
+    - User Acceptance Testing (UAT)
+    - Alpha Testing
+    - Beta Testing
+
+
+Example (FinTech App):
+
+Requirement: "User can transfer up to 1,00,000 per day."
+- Verification: Code enforces the 1,00,000 daily transfer limit correctly.
+- Validation: Confirm whether 1,00,000/day matches real customer expectations and business needs.
+
+-----------------------------------------------------------------------------------------------------------------
+
+                        What is Localization and Internationalization Testing?
+                        ------------------------------------------------------
+
+Internationalization
+--------------------
+
+- Ensures the application is designed to support multiple languages, regions, and cultural settings 
+  without major code changes.
+- Its preparing the application for multiple languages/regions.
+- Its mainly Developer side
+    The app is designed to:
+    - Store text in translation files
+    - Handle different currencies/date formats dynamically
+
+Localization
+------------
+
+- Verifies that the application correctly adapts to a specific language, region, or culture.
+- Adapting the application for a specific language/region.
+- Its testing/User side
+    Now the app is switched to:
+    - German language
+    - Euro currency
+    - German date format (DD.MM.YYYY)
+
+Internationalization = Build the capability
+Localization         = Use this capability for a locale
+-----------------------------------------------------------------------------------------------------------------
+
+                                        SDLC (Software Development Life Cycle)
+                                        ---------------------------------------
+
+Definition: Process followed to develop software.
+
+Phases:
+1. Requirement Gathering
+2. System Design
+3. Development (Coding)
+4. Testing
+5. Deployment
+6. Maintenance
+
+Goal: Deliver high-quality software that meets business requirements.
+
+
+                                        STLC (Software Testing Life Cycle)
+                                        -----------------------------------
+                        
+Definition: Process followed to test software.
+
+Phases:
+1. Requirement Analysis
+2. Test Planning
+3. Test Case Design
+4. Test Environment Setup
+5. Test Execution
+6. Test Closure
+
+Goal: Ensure the software is defect-free and meets user expectations.
+
+Key Difference:
+    SDLC focuses on building the product.
+    STLC focuses on validating and verifying the product.
+
+-----------------------------------------------------------------------------------------------------------------
+
+Depending on context, testing objectives may include:
+
+- Verifying requirements are met
+- Validating system fulfills user needs
+- Building confidence in quality level
+- Detecting failures and defects
+- Preventing defects
+- Providing information to stakeholders
+- Reducing risk
+- Complying with contractual/legal requirements
+
+ðŸ”Ž Real-World Example (Banking App)
+
+Requirement: "User can transfer funds up to daily limit."
+    Verification â†’ Check system enforces limit.
+    Validation â†’ Confirm limit aligns with regulatory rules.
+    Risk reduction â†’ Prevent over-transfer fraud.
+
+----------------------------------------------------------------------------------------------------------------
+
+                                            Causes of defects
+                                            -----------------
+
+A defect is introduced when there is a gap between expected and actual behavior.
+Defects can occur at any stage of SDLC.
+
+Major Causes of Defects:
+
+Requirement Issues
+- Incomplete requirements
+- Ambiguous requirements
+- Frequently changing requirements
+- Misunderstood business needs
+
+Design Issues
+- Poor architecture design
+- Incorrect logic flow
+- Missing edge case handling
+
+Coding Errors
+- Logical mistakes
+- Incorrect conditions or loops
+- Improper exception handling
+- Hardcoded values
+- Poor coding standards
+
+Communication Gaps
+- Miscommunication between BA, Dev, and QA
+- Incorrect understanding of client expectations
+
+Time Pressure
+- Tight deadlines
+- Skipping reviews or testing
+- Inadequate regression testing
+
+Environment Issues
+- Configuration mismatch
+- Version conflicts
+- Database or server setup errors
+
+
+Third-Party Dependencies
+- API failures
+- Library/version incompatibility
+- External system downtime
+
+-----------------------------------------------------------------------------------------------------------------
+
+TODO:
+
+/*
+SOFTWARE TESTING TYPES
+│
+├── Based on Action
+│   ├── Manual Testing
+│   └── Automated Testing
+│       ├── Unit Testing
+│       │   └── Component Integration Testing
+│       ├── Integration Testing
+│       │   └── System Integration Testing
+│       ├── System Testing
+│       └── Acceptance Testing
+│           ├── Alpha Testing
+│           ├── Beta Testing
+│           └── Regulatory Testing
+│
+├── Based on Approach
+│   ├── Static Testing
+│   └── Dynamic Testing
+│       ├── Functional Testing
+│       └── Non Functional Testing
+│           ├── Performance Testing
+│           ├── Security Testing
+│           ├── Usability Testing
+│           ├── Compatibility Testing
+│           ├── Reliability Testing
+│           └── Maintainability Testing
+│
+├── Based on Techniques
+│   ├── Blackbox Testing
+│   ├── Whitebox Testing
+│   └── Experienced Based Testing
+│
+├── Testing Levels
+│   ├── Level 1 → Unit Testing
+│   ├── Level 2 → Integration Testing
+│   ├── Level 3 → System Testing
+│   └── Level 4 → Acceptance Testing
+│
+└── Testing Strategies
+    ├── Capacity Testing
+    │   └── Feature Testing
+    ├── Load Testing
+    │   └── Smoke Testing
+    ├── Stress Testing
+    │   └── Sanity Testing
+    ├── Soak Testing
+    │   └── Regression Testing
+    ├── Scalability Testing
+    │   └── Monkey Testing
+    ├── Spike Testing
+    │   └── Gorilla Testing
+    ├── Volume Testing
+    │   └── Exploratory Testing
+    └── Adhoc Testing
+*/
+
+16. What is Unit Testing?
+Answer:
+Unlt Testing is a type of testing done by developers to check whether Individual unlts
+[components or functions) of the source code are working as expected. A "unit" is the
+smallest plece of code - usually a method or function - that performs a specific task.
+The goal of unit testing is to catch bugs early, at the code level, before the application is
+integrated or tested by the QA team.
+· Written and executed by developers [mostly].
+· Performed before Integratlon or system testing.
+. Uses tools like JUnlt, NUnlt, TestNG etc.
+· Automated, fast, and runs frequently during development.
+. Helps isolate and fix bugs early, saving time during QA.
+Example:
+Let's say you're testing an e-commerce web appllcatlon and there's a function called:
+public double calculateDiscount(double price, double discountPercent) {
+return price - (price * discountPercent / 100); }
+A unlt test would check:
+. If calculateDiscount(100, 10) returns 90.0
+· If
+. If calculateDiscount(0, 10) returns 0.0
+sluns aro handlod cprroetly fn a arror throun)
+
+calculateDiscount(200, 0) returns 200.0
+
+15. What is Alpha and Beta Testing?
+Answer:
+Alpha testing is performed by internal testers before releasing the product to users. Beta
+testing is done by a selected group of users in a real environment.
+Example:
+A new grocery delivery app is alpha tested by QA, then given to 50 real customers for beta
+testing before public release.
+
+10. What is Exploratory Testing and how is it different from Ad-hoc
+Testing?
+Answer:
+Exploratory testing is planned, time-boxed, and focuses on learning the app as you test. Ad-
+hoc testing is unstructured and often done without any documentation.
+Example:
+You set 30 minutes to explore and test the POS refund flow without scripts = exploratory.
+Randomly trying buttons after testing = ad-hoc.
+
+17. What is Exploratory Testing?
+Answer:This is an informal, creative approach where testers explore the application without
+test cases to discover issues based on intuition.
+
+Example:A tester plays around with the Selfridges site trying random filters and combinations
+to catch layout or usability issues.
+
+18. What is Ad-hoc Testing?
+Answer:Ad-hoc testing is an informal and unstructured testing method where tests are
+performed randomly without any documentation.
+
+Example:After testing login, a tester quickly clicks "Forgot Password" or "Help" to see if
+anything crashes - not part of formal test cases.
+
+19. What is UAT [User Acceptance Testing)?
+Answer:UAT is the final phase of testing done by the end user or client to confirm the
+software meets the business requirements before going live.
+
+12. What is Static Testing?
+Answer:
+Static testing involves reviewing the application or documentation without executing the
+code. It helps identify early-stage issues in requirements or design.
+Example:
+Before testing a new login feature, reviewing the requirement document and wireframes to
+spot any mismatches or missing flows.
+
+13. What is Risk-Based Testing?
+Answer:
+Risk-based testing focuses on testing the parts of the application that have the highest risk of
+failure or business impact if something goes wrong.
+Example:
+In a banking app, more effort is placed on testing the "Transfer Funds" feature than the
+"Change Theme" option.
+
+I
+
+-----------------------------------------------------------------------------------------------------------------
+
+                                    Levels of Software Testing
+                                    --------------------------
+
+
+                            Acceptance Testing  --> Top (Least in number, business validation)
+                                â–²
+                                â”‚
+                            System Testing      --> Even fewer, broader coverage
+                                â–²
+                                â”‚
+                            Integration Testing --> Fewer than unit tests
+                                â–²
+                                â”‚
+                            Unit Testing        --> Base (Maximum tests, fastest, cheapest)
+
+                            Testing Pyramid (Levels of Testing) 
+
+Cost and execution time increase as we move up.
+
+Software testing is performed at different levels to ensure quality at each stage of development.
+
+Level-1: Unit Testing (Individual component)
+--------------------------------------------
+- Tests individual components or functions.
+- Usually performed by Developers.
+- Focus: Logic correctness.
+
+Example:
+Testing a function that calculates interest separately.
+
+Level-2: Integration Testing (Module interaction)
+-------------------------------------------------
+- Tests interaction between integrated modules.
+- Ensures modules work together correctly.
+- Performed by Developers or QA.
+
+Example:
+Testing payment module integration with bank API.
+
+Level-3: System Testing (Complete System)
+-----------------------------------------
+- Tests the complete, integrated system.
+- Performed by QA team.
+- Focus: End-to-end functionality against requirements.
+- Includes functional and non-functional testing.
+
+Example:
+Testing full user flow from login â†’ transfer â†’ confirmation.
+
+Level-4: Acceptance Testing (Business Validation)
+--------------------------------------------------
+- Final level of testing.
+- Performed by Client / End Users / Product Owner / Product Manager.
+- Focus: Business requirements and user needs.
+- Includes UAT (User Acceptance Testing).
+
+Example:
+Client verifies that daily transfer limit meets business policy.
+
+-----------------------------------------------------------------------------------------------------------------
+
+                                        1ï¸âƒ£ Based on Action
+                                        -------------------
+
+1. Manual Testing
+  
+  Testing performed by humans without automation tools.
+  Ex: Tester manually verifies login with valid and invalid credentials in a banking app.
+
+2. Automated Testing
+
+  Testing executed using tools/scripts.
+  Ex: Cypress script runs regression suite after every deployment.
+
+
+                                      2ï¸âƒ£ Based on Test Techniques
+                                      ----------------------------
+                                      
+1. Black-Box Testing (Specification-based)
+
+Testing without knowledge of internal code.
+
+Techniques (ISTQB):
+
+Equivalence Partitioning
+
+Boundary Value Analysis
+
+Decision Table Testing
+
+State Transition Testing
+
+Use Case Testing
+
+Example:
+Transfer limit:
+
+Valid: â‚¹99,999
+
+Boundary: â‚¹1,00,000
+
+Invalid: â‚¹1,00,001
+
+2. White-Box Testing (Structure-based)
+
+Testing internal code structure.
+
+Techniques (ISTQB):
+
+Statement coverage
+
+Decision coverage
+
+Path testing
+
+Example:
+Ensuring all IF-ELSE conditions in interest calculation are executed.
+
+3. Experience-Based Testing
+
+Based on tester knowledge and intuition.
+
+Techniques (ISTQB):
+
+Exploratory Testing
+
+Error Guessing
+
+Checklist-based Testing
+
+Example:
+Tester tries rapid double-click on payment button expecting duplicate transaction bug.
+
+-----------------------------------------------------------------------------------------------------------------
+
+Functional Testing:
+- Verifies if the system/feature is working accoring to the requirements
+- Focuses on business logic and features.
+- Based on requirements / acceptance criteria
+
+Non-Functional Testing:
+- How well the system does within the design and resource constraints
+- Focuses on system qualities and performance characteristics.
+
+-----------------------------------------------------------------------------------------------------------------
+
+Traditionally:
+    Dev builds â†’ QA tests later âŒ
+
+Shift-left:
+    Testing starts alongside or even before development âœ…
+
+Testing on feature branch env is not shift left testing since its done after the code is written
+
+Ideal shift left testing means
+- Validating requirements before coding
+- Writing test scenarios during grooming
+
+How it looks in practice
+- Writing test scenarios during requirement phase
+- Reviewing user stories and acceptance criteria early
+- Adding unit tests and API tests during development
+
+In my current organisation, we have shift left practice, not that strict, 
+we write and approve test design, 
+
+-----------------------------------------------------------------------------------------------------------------
+
+Its a document that consists of scope, approach, resources and outline of the 
+testing process
+
+-----------------------------------------------------------------------------------------------------------------
+
+Sanity Testing:
+- To validate that a specific bug fix or change is working as expected and no other things break 
+  due to this changes
+- If sanity fails â†’ fix is rejected
+
+Smoke Testing:
+- To verify that the basic and critical functionalities of the application is working
+- If smoke fails â†’ build is rejected
+- ex: app launch, login
+
+-----------------------------------------------------------------------------------------------------------------
+
+Core Difference
+Ad-hoc Testing â†’ Random, unstructured testing without planning
+Exploratory Testing â†’ Simultaneous learning, test design, and execution with intent
+
+                                            Ad-hoc Testing
+
+Purpose:
+    Quickly find defects without any predefined approach, Provided, YOU HAVE KNOWLEDGE OF THE APPLICATION
+
+Characteristics:
+    No documentation
+    No test cases
+    Completely random and informal
+
+Example:
+    Clicking around the app randomly to see if anything breaks
+    ðŸ‘‰ Useful for quick checks, but not reliable for coverage
+
+                                    Exploratory Testing
+
+Purpose:
+    Systematically explore the application to discover hidden defects Povided, YOU DON'T HAVE APPLICATION KNOWLEDGE
+
+Characteristics:
+    Light planning (charters/goals)
+    Tester actively learns the system while testing
+    More structured than ad-hoc, but still flexible
+
+Example:
+    "Explore checkout flow with invalid inputs and edge cases"
+    You intentionally test boundaries, error handling, and flows
+
+    ðŸ‘‰ Highly effective for complex or new features
+
+-----------------------------------------------------------------------------------------------------------------
+
+Retesting:
+
+- Done to verify a specific bug fix
+- Focuses only on failed test cases
+- Ensures the defect is actually resolved
+- Narrow scope, targeted
+- Usually high priority, executed immediately after fix
+
+Regression Testing:
+
+- Done to ensure new changes didn't break existing functionality
+- Covers impacted + critical areas of the application
+- Validates overall system stability
+- Broad scope, suite-based
+- Often automated and run in CI/CD, not done after every fix
+-----------------------------------------------------------------------------------------------------------------

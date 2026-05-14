@@ -1,8 +1,0 @@
-Functional Testing:
-- Verifies if the system/feature is working accoring to the requirements
-- Focuses on business logic and features.
-- Based on requirements / acceptance criteria
-
-Non-Functional Testing:
-- How well the system does within the design and resource constraints
-- Focuses on system qualities and performance characteristics.
