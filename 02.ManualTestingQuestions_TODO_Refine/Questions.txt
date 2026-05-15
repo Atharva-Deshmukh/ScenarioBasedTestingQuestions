@@ -1,3 +1,26 @@
+TODOs:
+- Some real testing scenarios like Login page, ecommerce app...
+
+--------------------------------------------------------------------------------------------------------------------
+
+You need to test across multiple environments (e.g., staging, UAT, production). How do you manage?
+
+  My test strategy varies based on different environments.
+
+  Manual Test perspective:
+    Staging → full regression and integration testing
+    UAT → business-critical and end-to-end workflows
+    Production → lightweight smoke tests only to avoid impacting users
+
+
+  Automation Test perspective:
+    - I keep environment-specific data like baseURLs, credentials, ApiURLs in a separate env config file so 
+      the same automation suite can run across environments without code changes.
+    - Rather than static data on each environment, I will prefer to create the data dynamically via scripts
+      in before() to make the tests more of env independent and avoid flakiness.
+    - I also validate build versions and deployments before execution to ensure tests run against the 
+      correct release.
+
 --------------------------------------------------------------------------------------------------------------------
 
 How will you test customer registration web page?
@@ -314,6 +337,7 @@ ex: OAuth service
   setting up separately for testing. This will reduce test efforts.
 - In case the developers are not covering full use cases, we from testing side will add our own 
   test cases to ensure full coverage.
+- What I will test: API request/response structures, behaviour of system when service is down, Error handling mechanisms
 
 --------------------------------------------------------------------------------------------------------------------
 Suppose you find a bug in production, how would you make sure the same bug is not introduced again?
@@ -478,6 +502,27 @@ Explain what will be your reaction if the project you have been working on got s
 
     Highlight what will be tested vs what may be partially tested - Partial release possibility
     Call out any risks or potential gaps early
+
+
+    Slight modification:
+
+   A critical feature is not working and release is in 2 hours. What's your approach?
+
+  Immediately escalate to your test lead and development team. Prioritize a fix or rollback. 
+  Re-test the fix and perform a mini regression on related areas.
+
+
+  Q. You find a blocker defect just before your test cycle ends.
+  What steps will you take?
+  Answer:
+  . Log the bug with high severity and priority
+  . Inform test lead and dev team immediately
+  . Delay sign-off if needed
+  . Re-test thoroughly once fixed
+  . Document the incident
+  Example:
+  A "Proceed to Checkout" button was not responding in the web app. You raised a critical bug, retested after the fix,
+  and extended the test cycle by a day.
 
 --------------------------------------------------------------------------------------------------------------------
 

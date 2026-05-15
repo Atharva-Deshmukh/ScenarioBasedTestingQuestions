@@ -1,0 +1,15 @@
+Scenario: You're given a login page to test. What all scenarios will you
+cover?
+Answer:
+. Valid/invalid username and password
+· Blank fields
+· SQL injection
+· Case sensitivity
+. Session timeouts
+. Password masking
+. Remember me checkbox
+. Error messages
+. Locked account after multiple attempts
+Example:
+In an admin login portal for POS, you tested special characters in fields, login attempts limits, and browser back-
+button behavior post-login.
