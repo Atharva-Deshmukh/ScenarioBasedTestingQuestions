@@ -3,6 +3,36 @@ TODOs:
 
 --------------------------------------------------------------------------------------------------------------------
 
+Explain Test Process used in your current project.
+
+Typical Test Process:
+
+1. Requirement Analysis
+    - Understand business requirements/user stories
+
+2. Test Planning
+    - Define scope, strategy, timelines, tools
+
+3. Test Design
+    - Create test cases/test data
+
+4. Test Environment Setup
+    - Configure QA/staging environment
+
+5. Test Execution
+    - Execute manual/automation tests
+
+6. Defect Reporting
+    - Log and track defects
+
+7. Regression Testing
+    - Verify existing functionality after fixes
+
+8. Test Closure
+    - Prepare test summary reports/metrics
+
+--------------------------------------------------------------------------------------------------------------------
+
 You need to test across multiple environments (e.g., staging, UAT, production). How do you manage?
 
   My test strategy varies based on different environments.

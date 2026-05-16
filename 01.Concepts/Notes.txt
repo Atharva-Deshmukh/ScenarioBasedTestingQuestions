@@ -190,8 +190,8 @@ Key Difference:
 
 -----------------------------------------------------------------------------------------------------------------
                                
-                                Difference Between Bug, Defect, and Error?
-                                ------------------------------------------
+                                Difference Between Bug, Defect, failure, and Error?
+                                ---------------------------------------------------
 
 - Error: A mistake made by the developer during coding.
          ex: using wrong formula to calculate discount.
@@ -199,8 +199,23 @@ Key Difference:
 - Defect: A deviation from expected behavior found during testing.
          ex: wrong discunt output in the UI.
 
+- Failure: When application fails during execution.
+         ex: Application crashes during payment.
+
 - Bug: A confirmed defect that is logged and tracked for fixing.
        ex: the above wrong discount defect is logged on JIRA as its confirmed.
+
+-----------------------------------------------------------------------------------------------------------------
+
+                                Difference Between Incident and Defect
+                                --------------------------------------
+
+| Incident                                          | Defect                                         |
+|---------------------------------------------------|------------------------------------------------|
+| Any unexpected issue/event observed               | Confirmed flaw in application                  |
+| May or may not be caused by software defect       | Always caused by software issue                |
+| Requires investigation                            | Requires fixing                                |
+| Example: Server crash/network issue               | Example: Incorrect calculation in application  |
 
 -----------------------------------------------------------------------------------------------------------------
 
@@ -209,6 +224,54 @@ Key Difference:
 
 - Severity: Measures how serious the bug is for the system.
 - Priority: Defines how soon the bug should be fixed.
+
+-----------------------------------------------------------------------------------------------------------------
+
+                            How do you assign Severity and Priority?
+                            ----------------------------------------
+
+Severity is based on:
+- Business impact
+- Functional impact
+
+Priority is based on:
+- Business urgency
+- Release timelines
+
+High Severity + High Priority:
+- Payment failure
+
+High Severity + Low Priority:
+- Rarely used report crashing
+
+Low Severity + High Priority:
+- Company logo incorrect on homepage before release
+
+Low Severity + Low Priority:
+- Minor UI alignment issue
+
+-----------------------------------------------------------------------------------------------------------------
+
+                                    Who assigns Severity and Priority?
+                                    ----------------------------------
+
+Severity -> QA/Tester.
+
+Priority -> BA/PO, PM
+-----------------------------------------------------------------------------------------------------------------
+
+                                        What is Defect Report?
+                                        ---------------------
+
+A document/ticket containing complete defect details.
+- Defect ID
+- Summary
+- Steps to reproduce
+- Expected result
+- Actual result
+- Severity/Priority
+- Screenshots/logs
+- Status
 
 -----------------------------------------------------------------------------------------------------------------
 
@@ -261,6 +324,24 @@ A standard test case includes:
 
 -----------------------------------------------------------------------------------------------------------------
 
+                                How do you approach Test Case Development?
+                                ------------------------------------------
+
+Approach:
+- Understand requirements/user stories
+- Identify test scenarios
+- Prepare positive & negative test cases
+- Map test cases to requirements (RTM)
+- Review and optimize test coverage
+
+Focus:
+- Functional coverage
+- Edge cases
+- Business workflows
+- Error handling
+
+-----------------------------------------------------------------------------------------------------------------
+
                                     What is a Test Environment?
                                     ---------------------------
 
@@ -290,6 +371,162 @@ Its helpful for debugging and tracking the progress of testing.
 
 -----------------------------------------------------------------------------------------------------------------
 
+                                            What is Test Analysis?
+                                            ----------------------
+
+Activity of analyzing requirements to identify:
+- Test conditions
+- Test scenarios
+- Risks
+- Dependencies
+
+It answers:
+"What should be tested?"
+
+-----------------------------------------------------------------------------------------------------------------
+
+                                        What is Test Development Process?
+                                        ---------------------------------
+
+The process of creating effective test cases, test data, and test artifacts
+based on requirements and business scenarios.
+
+Typical steps involved:
+1. Requirement Analysis - Understand requirements/user stories
+2. Test Analysis - Identify test conditions/scenarios
+3. Test Design - Create test cases and test data
+4. Test Review - Review test cases for coverage/quality
+5. Test Automation (if applicable) - Automate stable/repetitive test cases
+6. Test Maintenance - Update test cases as requirements change
+
+Why is Test Development Process Important?
+- Improves regression effectiveness
+- Saves time and cost
+
+-----------------------------------------------------------------------------------------------------------------
+
+                                        What is Test Implementation?
+                                        ----------------------------
+
+The phase where test cases are prepared for execution.
+
+Activities:
+- Organize test cases into test suites
+- Prepare test data
+- Configure test environment
+- Develop automation scripts
+- Verify test readiness
+
+Goal --> Ensure everything is ready for test execution.
+
+-----------------------------------------------------------------------------------------------------------------
+
+                                    What are some Test Design Techniques?
+                                    -------------------------------------
+
+Main categories:
+
+1. Specification-Based (Black Box)
+
+    This is based on:
+    - Requirements
+    - Functional behavior
+    - Inputs/outputs
+
+    Tester does NOT need internal code knowledge.
+
+    Techniques used:
+    - Equivalence Partitioning (EP)
+    - Boundary Value Analysis (BVA)
+    - Decision Table Testing
+    - State Transition Testing
+
+2. Structure-Based (White Box)
+
+    Testing technique based on:
+    - Internal code structure
+    - Logic
+    - Branches
+    - Conditions
+
+    Requires programming/code knowledge.
+
+    Focus: "How the system works internally"
+
+    Example:
+    Testing all branches/conditions in login authentication code.
+
+    Techiques used:
+    - Statement Coverage
+    - Branch Coverage
+    - Path Coverage
+
+3. Experience-Based
+
+    Testing based on:
+    - Tester experience
+    - Domain knowledge
+    - Past defect history
+
+    Focus: Finding defects using intuition and experience.
+
+    Techiques used:
+    - Exploratory Testing
+    - Error Guessing 
+        based on past defect history, tester "guesses" where defects are likely to occur.
+    - Checklist-Based Testing
+       performed using a predefined checklist of important items/scenarios.
+
+-----------------------------------------------------------------------------------------------------------------
+
+                        Why are both EP and BVA required together?
+                        ------------------------------------------
+
+EP Reduces number of test cases by testing representative values.
+
+BVA Ensures edge/boundary defects are detected.
+
+Together they provide:
+- Better coverage
+- Optimized test cases
+- Higher defect detection
+
+Ex:
+    EP tests:
+    - 15, 30, 70
+
+    BVA additionally tests:
+    - 17,18,19,59,60,61
+
+-----------------------------------------------------------------------------------------------------------------
+
+                                    What is State Transition Testing?
+                                    ---------------------------------
+
+Technique used when system behavior changes based on:
+- Current state
+- Events/actions
+
+Focus:
+State changes and transitions.
+
+Example:
+ATM Card States
+
+States:
+- Active
+- Blocked
+
+Scenario:
+3 wrong PIN attempts -> Card transitions from Active -> Blocked
+
+Useful for:
+- Workflow systems
+- Login/session management
+- Order/payment status flows
+
+-----------------------------------------------------------------------------------------------------------------
+
                             What is Test Closure/Test status report?
                             ----------------------------------------
 
@@ -303,6 +540,40 @@ summary reports, documenting lessons learned, and archiving test artifacts.
 
 Entry criteria --> defines when testing should begin (e.g., code freeze, stable build given).
 Exit criteria  -->  define when testing is considered complete (e.g., no critical defects, 100% passing rate).
+
+-----------------------------------------------------------------------------------------------------------------
+
+                                        What is DoR and DoD?
+                                        --------------------
+
+DoR (Definition of Ready):
+- Checklist that determines whether a user story is ready for development/testing.
+
+    Examples:
+    - Acceptance criteria defined
+    - Dependencies identified
+    - Story estimated
+    - Requirements clear
+
+DoD (Definition of Done):
+- Checklist that determines whether a story is completely finished.
+
+    Examples:
+    - Development completed
+    - Code reviewed
+    - Testing completed
+    - No critical defects
+    - Deployed successfully
+
+-----------------------------------------------------------------------------------------------------------------
+
+                            What do you understand by Test Closure?
+                            ---------------------------------------
+
+The final phase of testing where testing activities are formally completed and evaluated.
+
+- Test closure report
+- Sign-off
 
 -----------------------------------------------------------------------------------------------------------------
 
@@ -359,6 +630,18 @@ States of a defect: New -> Assigned -> Open -> Fixed -> Retest -> Closed / Reope
 
 Example: A tester finds an issue with payment failure, logs it in JIRA, it's fixed by the dev,
 retested, and closed.
+
+-----------------------------------------------------------------------------------------------------------------
+
+                                What is Defect Detection Percentage (DDP)?
+                                ------------------------------------------
+
+DDP measures effectiveness of testing in finding defects before release.
+
+Formula:
+    DDP = (Defects found during testing / (Total defects found during testing + production)) × 100
+
+    Higher DDP = Better testing effectiveness
 
 -----------------------------------------------------------------------------------------------------------------
 
@@ -487,6 +770,13 @@ Client verifies that daily transfer limit meets business policy.
                 Premium + >1000
                 Premium + <1000
                 Non-premium
+
+│   ├── Greybox Testing
+           - the tester has partial knowledge of the internal application structure/code.
+             like 
+                DB Schema
+                API Cotracts
+           - But does not have full source code access like White Box Testing.
 
 │   └── Experienced Based Testing
            - Uses tester intuition and past experience.
@@ -911,5 +1201,234 @@ Later phases:
 There is also- Deployment overhead
 - Production support effort
 - Reputation and revenue loss
+
+-----------------------------------------------------------------------------------------------------------------
+
+                                        What is Pesticide Paradox Principle?
+                                        ------------------------------------
+
+If the same test cases are executed repeatedly, eventually they stop finding new defects.
+
+Reason:
+Application becomes resistant to those repeated tests, just like insects become resistant to pesticides.
+
+How to overcome it?
+- Regularly review/update test cases
+- Add new test scenarios
+- Perform exploratory testing
+- Include boundary/negative testing
+- Improve test data combinations
+
+Example:
+Login tested only with valid credentials may miss:
+- SQL injection
+- Session timeout
+- Invalid token issues
+
+-----------------------------------------------------------------------------------------------------------------
+
+                                        Is Exhaustive Testing Possible?
+                                        -------------------------------
+
+No, exhaustive testing is not possible.
+
+Reason:
+Testing all possible:
+- Inputs
+- Scenarios
+- Data combinations
+- User flows
+
+is practically impossible due to:
+- Time constraints
+- Cost constraints
+- Huge combinations
+
+Example:
+A form with 10 fields can have millions of combinations.
+
+Hence testing focuses on:
+- Risk-based testing
+- Priority-based testing
+- Critical paths
+
+-----------------------------------------------------------------------------------------------------------------
+
+                        What techniques are used in Risk-Based Testing?
+                        -----------------------------------------------
+
+Common techniques:
+- Requirement prioritization
+- Defect history analysis
+- Boundary Value Analysis
+- Exploratory Testing on critical areas
+
+-----------------------------------------------------------------------------------------------------------------
+
+                        Difference Between Project Risk and Product Risk
+                        ------------------------------------------------
+
+| Project Risk                                   | Product Risk                                  |
+|------------------------------------------------|-----------------------------------------------|
+| Impacts project delivery                       | Impacts product quality                       |
+| Related to timeline/resources/process          | Related to functionality/performance/security |
+| Example: Resource shortage                     | Example: Payment failure                      |
+
+-----------------------------------------------------------------------------------------------------------------
+
+                                    What is Risk Management?
+                                    ------------------------
+
+Risk Management is the process of:
+- Identifying risks
+- Analyzing risks
+- Prioritizing risks
+- Mitigating/monitoring risks
+
+-----------------------------------------------------------------------------------------------------------------
+
+                        What are different Software Development Approaches?
+                        ---------------------------------------------------
+
+Common SDLC Models:
+- Waterfall Model
+- V-Model
+- Agile Model
+- Spiral Model
+- Iterative Model
+- Incremental Model
+- DevOps Model
+-----------------------------------------------------------------------------------------------------------------
+
+                            Difference Between V-Model and Waterfall Model
+                            ---------------------------------------------
+
+| Waterfall Model                              | V-Model                                        |
+|----------------------------------------------|------------------------------------------------|
+| Testing starts after development             | Testing activities start early                 |
+| Sequential execution                         | Development and testing mapped in parallel     |
+| Less focus on validation                     | Strong verification & validation focus         |
+| Defects found late                           | Early defect detection                         |
+
+One-line Difference:
+    V-Model integrates testing activities alongside development,
+    while Waterfall performs testing after development completion.
+
+-----------------------------------------------------------------------------------------------------------------
+
+                                                What is Agile?
+                                                --------------
+
+A software development methodology that focuses on:
+- Iterative development
+- Continuous feedback
+- Customer collaboration
+- Faster delivery
+
+Key Idea:
+Deliver small working software increments frequently.
+
+-----------------------------------------------------------------------------------------------------------------
+                                        What is Agile Software Development?
+                                        -----------------------------------
+
+Agile Software Development is the practical implementation
+of Agile principles where:
+- Development happens in short iterations/sprints
+- Requirements evolve continuously
+- Teams collaborate closely
+- Continuous testing/integration happens
+
+Example:
+Instead of delivering whole product in 1 year,
+features are delivered every 2 weeks.
+
+-----------------------------------------------------------------------------------------------------------------
+
+                                                What is SCRUM?
+                                                --------------
+
+An Agile framework used to manage and deliver software iteratively.
+
+Key Components:
+- Sprint
+- Product Backlog
+- Sprint Backlog
+- Daily Standup
+- Sprint Planning
+- Sprint Review
+- Retrospective
+
+Roles:
+- Product Owner
+- Scrum Master
+- Development Team
+
+Example:
+Team works in 2-week sprints to deliver usable features.
+
+-----------------------------------------------------------------------------------------------------------------
+
+                                    What are STUBS and DRIVERS?
+                                    ---------------------------
+
+STUB:
+A dummy module that simulates lower-level components (closer to infrastructure layer, away from UI layer)
+called by higher-level modules.
+
+Used in:
+- Top-Down Integration Testing
+
+Example:
+Frontend ready but Payment API not ready.
+A stub simulates payment responses.
+
+
+DRIVER:
+A dummy module that simulates higher-level components (closer to User/business level)
+that call lower-level modules.
+
+Used in:
+- Bottom-Up Integration Testing
+
+Example:
+Database/API module ready but UI not ready.
+Driver triggers API calls for testing.
+
+-----------------------------------------------------------------------------------------------------------------
+
+                                    What is Configuration Management?
+                                    ---------------------------------
+
+Configuration Management is the process of managing:
+- Code versions
+- Builds
+- Environments
+- Test artifacts
+- Deployment configurations
+
+Goal -> Maintain consistency and traceability.
+
+Examples:
+- Managing QA/UAT/Prod configurations
+- Tracking build versions
+
+-----------------------------------------------------------------------------------------------------------------
+
+                                        What is Version Control?
+                                        ------------------------
+
+A system used to track and manage changes to source code/files over time.
+
+Features:
+- Code history
+- Branching
+- Merging
+- Collaboration
+- Rollback support
+
+Common Tools:
+- Git
+- SVN
 
 -----------------------------------------------------------------------------------------------------------------
