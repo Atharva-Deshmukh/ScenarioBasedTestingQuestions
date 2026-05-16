@@ -362,8 +362,8 @@ retested, and closed.
 
 -----------------------------------------------------------------------------------------------------------------
 
-What is Defect Leakage?
------------------------
+                                            What is Defect Leakage?
+                                            -----------------------
 
 It happens when a bug that should have been caught during testing is discovered by end users after deployment.
 
@@ -377,43 +377,34 @@ Defects can occur at any stage of SDLC.
 
 Major Causes of Defects:
 
-Requirement Issues
-- Incomplete requirements
-- Ambiguous requirements
-- Frequently changing requirements
-- Misunderstood business needs
+    Requirement Issues
+    - Incomplete requirements
+    - Ambiguous requirements
+    - Frequently changing requirements
 
-Design Issues
-- Poor architecture design
-- Incorrect logic flow
-- Missing edge case handling
+    Design Issues
+    - Missing edge case handling
 
-Coding Errors
-- Logical mistakes
-- Incorrect conditions or loops
-- Improper exception handling
-- Hardcoded values
-- Poor coding standards
+    Coding Errors
+    - Logical mistakes
+    - Hardcoded values
 
-Communication Gaps
-- Miscommunication between BA, Dev, and QA
-- Incorrect understanding of client expectations
+    Communication Gaps
+    - Incorrect understanding of client expectations
 
-Time Pressure
-- Tight deadlines
-- Skipping reviews or testing
-- Inadequate regression testing
+    Time Pressure
+    - Skipping reviews or testing
+    - Inadequate regression testing
 
-Environment Issues
-- Configuration mismatch
-- Version conflicts
-- Database or server setup errors
+    Environment Issues
+    - Configuration mismatch
+    - Version conflicts
+    - Database or server setup errors
 
-
-Third-Party Dependencies
-- API failures
-- Library/version incompatibility
-- External system downtime
+    Third-Party Dependencies
+    - API failures
+    - Library/version incompatibility
+    - External system downtime
 
 -----------------------------------------------------------------------------------------------------------------
 
@@ -436,11 +427,12 @@ Third-Party Dependencies
 
 Cost and execution time increase as we move up.
 
-Level-1: Unit Testing (Individual component)
+Level-1: Unit Testing (Unit = Individual component, the smallest testable part of the software)
 --------------------------------------------
 - Tests individual components or functions.
 - Performed by Developers.
 - Focus: Logic correctness.
+- Stubs and drivers are used to replace missing components
 
 Level-2: Integration Testing (Module interaction)
 -------------------------------------------------
@@ -598,6 +590,7 @@ BASED ON APPROACH:
     │   └── Acceptance Testing
     │       ├── Alpha Testing
     │       ├── Beta Testing
+    │       └── Operational Acceptance Testing
     │       └── Regulatory Testing
     │
     └── Non-Functional Testing
@@ -625,30 +618,6 @@ Static Testing:
 Dynamic Testing: 
 - Testing by executing the application.
 - It includes Runtime validations, Assertions and Data-driven testing
-
-
-Integration Testing - Component Integration Testing (CIT):
-
-    - Tests integration between internal components/modules within the same application or microservice.
-    - mostly Mostly mocked dependencies are used
-    - Its Faster & controlled
-    - Focus is on
-        API/module interaction
-        DB validation
-        Failure handling
-        Mocking dependencies
-
-
-Integration Testing - System Integration Testing (SIT):
-
-    - Tests integration between different systems/services/external applications.
-    - Its Cross-system validation
-    - No mock dependencies, Real/staging integrations
-    - Focus is on 
-        event testing
-        Contract testing
-        Third-party integrations
-        Distributed system failures
 
 Functional Testing:
 - verifies what the system does, according to:
@@ -694,6 +663,72 @@ Non-Functional Testing - Maintainability Testing
     Modularity
     Testability
 
+
+Integration Testing - Component Integration Testing (CIT):
+
+    - Tests integration between internal components/modules within the same application or microservice.
+    - mostly Mostly mocked dependencies are used
+    - Its Faster & controlled
+    - Focus is on
+        API/module interaction
+        DB validation
+        Failure handling
+        Mocking dependencies
+
+
+Integration Testing - System Integration Testing (SIT):
+
+    - Tests integration between different systems/services/external applications.
+    - Its Cross-system validation
+    - No mock dependencies, Real/staging integrations
+    - Focus is on 
+        event testing
+        Contract testing
+        Third-party integrations
+        Distributed system failures
+
+
+The above were - "What kind of integration are we testing?".
+There are also the approaches of integration testing.
+
+So, overall picture:
+                                                Integration Testing
+                                                ├── Types
+                                                │   ├── Component Integration Testing
+                                                │   └── System Integration Testing
+                                                │
+                                                └── Approaches
+                                                    ├── Big Bang
+                                                    └── Incremental
+                                                        ├── Top-Down
+                                                        ├── Bottom-Up
+                                                        └── Functional Incremental/Hybrid
+
+    Integration Testing Approaches
+
+    ├── Big Bang Integration
+        - All modules integrated together at once and tested.
+        - Disadvantage: Difficult to trace failure due to integration
+        - Advantage: everything is finished before testing starts, so no stubs and divers required
+
+    └── Incremental Integration -> Modules integrated and tested step by step. More practical and widely used
+                                -> Its time consuming as drivers and stubs have to be kept ready
+        ├── Top-Down
+            - Testing starts from higher-level modules first.
+            - Uses stubs for lower modules.
+            - Ex: Frontend tested before backend is fully ready.
+
+        ├── Bottom-Up
+            - Testing starts from lower-level modules first.
+            - Uses drivers for upper modules.
+            - Database/API layer tested before UI.
+
+        └── Functional Incremental / Hybrid
+            - Modules integrated based on business workflow/functionality.
+            - Very common in Agile + microservices.
+            - Checkout flow integrated gradually ==> Cart → Payment → Order → Notification
+
+
 System Testing - Feature Testing
 - Testing a specific feature independently.
 - Ensure the feature behaves correctly for all scenarios.
@@ -728,6 +763,17 @@ System Testing - Adhoc Testing
 - Its Random + informal testing
 
 
+Integration testing vs System testing:
+
+| Integration Testing                                       | System Testing                                  |
+|-----------------------------------------------------------|-------------------------------------------------|
+| Focuses on interfaces, communication, and data flow       | Focuses on overall system behavior              |
+| Tests integrated units/components                         | Tests the entire system                         |
+| Usually done after unit testing                           | Done after integration testing                  |
+| Finds issues in API calls, DB interactions, message flow  | Finds functional/business flow issues           |
+| Scope is limited to interacting modules                   | Scope is the whole application                  |
+
+
 Acceptance Testing:
 - verifies whether the application is ready for:
     Business use
@@ -744,6 +790,13 @@ Acceptance Testing - Beta Testing:
 - performed by real users in a real environment before final production rollout.
 - Usually done by Selected customers and external users in real world conditions
 - Goal is to Collect real user feedback and discover issues missed internally.
+
+Acceptance Testing - Operational Acceptance Testing:
+- validates if the system meets operational requirements. 
+- Tests to include:
+    Testing backup/restore
+    High availability & Disaster recovery
+    Testing maintenance tasks
 
 Acceptance Testing - Regulatory Testing:
 - Done to ensure the legal and compliance requirements are met.
@@ -791,4 +844,72 @@ Regression Testing:
 - Covers impacted + critical areas of the application
 - Broad scope, suite-based
 - Often automated and run in CI/CD, not done after every fix
+-----------------------------------------------------------------------------------------------------------------
+
+What is QE (Quality Engineering)?
+
+Quality Engineering is a modern quality approach that applies continuous
+quality practices throughout the Software Development Lifecycle (SDLC).
+
+QE is:
+- Automation-driven
+- Shift-left focused
+- Closely integrated with Agile and DevOps
+- Focused on building quality into the product from the beginning
+
+Key Focus Areas:
+- Test automation
+- CI/CD quality gates
+- Performance testing
+- Security testing
+- Observability
+- Continuous testing
+
+Example:
+In a DevOps pipeline, QE ensures:
+- Automated API/UI tests run on every build
+- Security scans are automated
+- Performance checks run continuously
+- Defects are caught early in development
+
+-----------------------------------------------------------------------------------------------------------
+
+                                        Difference Between QE vs QA vs QC
+                                        ---------------------------------
+
+| QE (Quality Engineering)                            | QA (Quality Assurance)                         | QC (Quality Control)                          |
+|-----------------------------------------------------|------------------------------------------------|-----------------------------------------------|
+| Engineering-driven quality approach                 | Process-oriented approach                      | Product-oriented approach                     |
+| Integrated with Agile, DevOps, CI/CD                | Ensures standards/processes are followed       | Validates final product quality               |
+| Strong focus on automation and shift-left testing   | Mostly process and methodology focused         | Mostly execution/testing focused              |
+| Continuous testing and monitoring                   | Verification activity                          | Validation activity                           |
+| Proactive + Preventive + Continuous                 | Preventive/Proactive                           | Reactive                                      |
+| Example: Automated quality pipelines                | Example: Defining QA standards/processes       | Example: Manual/automation test execution     |
+
+One-line Difference:
+- QA ensures quality processes.
+- QC checks product quality.
+- QE engineers quality throughout the entire SDLC.
+
+-----------------------------------------------------------------------------------------------------------------
+
+                        Why does the cost of fixing defects increase in later phases of SDLC?
+                        ---------------------------------------------------------------------
+
+Because defects found late require more rework and  retesting.
+
+Earlier phases:
+- Defect is isolated
+- Easier and cheaper to fix
+
+Later phases:
+- Code is already integrated/deployed
+- Multiple modules may be affected and wider impact analysis is required
+- Requires retesting/regression testing
+- May impact customers/business
+
+There is also- Deployment overhead
+- Production support effort
+- Reputation and revenue loss
+
 -----------------------------------------------------------------------------------------------------------------
